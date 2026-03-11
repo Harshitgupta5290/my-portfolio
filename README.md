@@ -22,10 +22,6 @@
 ## Demo
 
 <p align="center">
-  <img src="./public/image/screen.png" alt="Portfolio Screenshot" width="100%">
-</p>
-
-<p align="center">
   <a href="https://harshitgupta5290.github.io/my-portfolio" target="_blank">
     <strong>View Live Site</strong>
   </a>
