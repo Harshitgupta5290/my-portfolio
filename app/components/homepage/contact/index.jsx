@@ -6,79 +6,138 @@ import { CiLocationOn } from "react-icons/ci";
 import { FaInstagram } from 'react-icons/fa';
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
+import ContactForm from './contact-form';
 
 function ContactSection() {
   return (
     <div id="contact" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+      {/* Top gradient line */}
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
           <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent w-full" />
         </div>
       </div>
 
-      <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Contact
+      {/* Section header */}
+      <div className="flex flex-col items-center mt-12 mb-14">
+        <p className="text-[#16f2b3] text-[10px] uppercase tracking-[5px] font-mono mb-4">
+          // get in touch
+        </p>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white text-center leading-tight">
+          Let&apos;s{' '}
+          <span className="bg-gradient-to-r from-violet-400 to-[#16f2b3] bg-clip-text text-transparent">
+            Connect
           </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-        </div>
+        </h2>
+        <p className="text-gray-600 text-sm mt-3 max-w-sm text-center font-mono leading-relaxed">
+          Open to roles, freelance projects &amp; AI/backend collaborations
+        </p>
+        <div className="w-20 h-[2px] bg-gradient-to-r from-violet-500 to-[#16f2b3] mt-5 rounded-full" />
       </div>
 
-      <div className="flex flex-col items-center text-white py-6 gap-10">
-        <div className="text-center max-w-xl">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-            Let&apos;s <span className="text-[#16f2b3]">Connect</span>
-          </h2>
-          <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-            Open to full-time roles, freelance projects, and collaboration on AI &amp; backend systems.
-            Feel free to reach out — I usually respond within 24 hours.
-          </p>
-        </div>
+      {/* Two-column layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl">
-          <a
-            href={`mailto:${personalData.email}`}
-            className="flex flex-col items-center gap-2 p-5 rounded-xl bg-[#0d1224] border border-[#1b2c68a0] hover:border-[#16f2b3] transition-all duration-300 group"
-          >
-            <MdAlternateEmail className="text-[#8b98a5] group-hover:text-[#16f2b3] transition-colors duration-300" size={28} />
-            <span className="text-xs text-gray-400 text-center break-all">{personalData.email}</span>
-          </a>
+        {/* LEFT column */}
+        <div className="flex flex-col gap-6">
 
-          <a
-            href={`tel:${personalData.phone}`}
-            className="flex flex-col items-center gap-2 p-5 rounded-xl bg-[#0d1224] border border-[#1b2c68a0] hover:border-[#16f2b3] transition-all duration-300 group"
-          >
-            <IoMdCall className="text-[#8b98a5] group-hover:text-[#16f2b3] transition-colors duration-300" size={28} />
-            <span className="text-xs text-gray-400 text-center">{personalData.phone}</span>
-          </a>
+          {/* Contact info cards */}
+          <div className="flex flex-col gap-3">
+            {[
+              { icon: MdAlternateEmail, label: "Email", value: personalData.email, href: `mailto:${personalData.email}`, color: "#16f2b3" },
+              { icon: IoMdCall, label: "Phone", value: personalData.phone, href: `tel:${personalData.phone}`, color: "#a78bfa" },
+              { icon: CiLocationOn, label: "Location", value: personalData.address, href: null, color: "#ec4899" },
+            ].map(({ icon: Icon, label, value, href, color }) => (
+              <div
+                key={label}
+                className="group flex items-center gap-4 p-4 rounded-xl border border-[#1b2c6840] bg-[#0d1224] hover:border-[#1b2c6880] transition-all duration-300"
+              >
+                <div
+                  className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: `${color}12`, border: `1px solid ${color}28` }}
+                >
+                  <Icon size={18} style={{ color }} />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-[10px] text-gray-600 uppercase tracking-widest font-mono mb-0.5">{label}</p>
+                  {href ? (
+                    <a href={href} className="text-gray-300 text-sm hover:text-white transition-colors duration-200 truncate block">
+                      {value}
+                    </a>
+                  ) : (
+                    <p className="text-gray-300 text-sm">{value}</p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
 
-          <div className="flex flex-col items-center gap-2 p-5 rounded-xl bg-[#0d1224] border border-[#1b2c68a0]">
-            <CiLocationOn className="text-[#8b98a5]" size={28} />
-            <span className="text-xs text-gray-400 text-center">{personalData.address}</span>
+          {/* Social links */}
+          <div>
+            <p className="text-[10px] text-gray-600 uppercase tracking-widest font-mono mb-3">// find me on</p>
+            <div className="flex items-center gap-3">
+              {[
+                { href: personalData.github, Icon: IoLogoGithub, label: "GitHub" },
+                { href: personalData.linkedIn, Icon: BiLogoLinkedin, label: "LinkedIn" },
+                { href: personalData.instagram, Icon: FaInstagram, label: "Instagram" },
+              ].map(({ href, Icon, label }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  className="group flex items-center gap-2 px-4 py-2.5 rounded-lg border border-[#1b2c6840] bg-[#0d1224] hover:border-[#16f2b3]/40 hover:bg-[#16f2b305] transition-all duration-300"
+                >
+                  <Icon size={15} className="text-gray-500 group-hover:text-[#16f2b3] transition-colors duration-300" />
+                  <span className="text-gray-500 group-hover:text-gray-300 text-xs font-mono transition-colors duration-300">{label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Terminal availability widget */}
+          <div className="rounded-xl border border-[#1b2c6840] bg-[#080d1a] overflow-hidden">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-[#1b2c6830]">
+              <div className="flex gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-red-500/70" />
+                <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
+                <div className="w-3 h-3 rounded-full bg-green-500/70" />
+              </div>
+              <span className="text-gray-600 text-[10px] font-mono ml-2">status.sh</span>
+              <div className="ml-auto flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                <span className="text-green-400 text-[9px] font-mono">live</span>
+              </div>
+            </div>
+            <div className="p-5 font-mono text-xs space-y-2">
+              <p>
+                <span className="text-[#16f2b3]">$</span>
+                <span className="text-gray-500"> check-availability --verbose</span>
+              </p>
+              <p className="text-gray-500 pl-2">
+                {'>'} Status:{' '}
+                <span className="text-green-400 font-semibold">Available</span> for opportunities
+              </p>
+              <p className="text-gray-500 pl-2">
+                {'>'} Response: <span className="text-[#16f2b3]">within 24 hours</span>
+              </p>
+              <p className="text-gray-500 pl-2">
+                {'>'} Timezone: <span className="text-violet-400">IST (UTC+5:30)</span>
+              </p>
+              <p className="text-gray-500 pl-2">
+                {'>'} Open to: <span className="text-white">Full-time · Freelance · Contract</span>
+              </p>
+              <p className="mt-1">
+                <span className="text-[#16f2b3]">$</span>
+                <span className="inline-block w-2 h-3.5 bg-[#16f2b3]/60 ml-1 animate-pulse align-middle" />
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-5">
-          <Link target="_blank" href={personalData.github}>
-            <IoLogoGithub className="bg-[#8b98a5] p-2 sm:p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer" size={44} />
-          </Link>
-          <Link target="_blank" href={personalData.linkedIn}>
-            <BiLogoLinkedin className="bg-[#8b98a5] p-2 sm:p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer" size={44} />
-          </Link>
-          <Link target="_blank" href={personalData.instagram}>
-            <FaInstagram className="bg-[#8b98a5] p-2 sm:p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer" size={44} />
-          </Link>
+        {/* RIGHT column: Form */}
+        <div>
+          <ContactForm />
         </div>
-
-        <Link
-          href={`mailto:${personalData.email}`}
-          className="flex items-center gap-2 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-200"
-        >
-          <MdAlternateEmail size={18} />
-          Send me an Email
-        </Link>
       </div>
     </div>
   );

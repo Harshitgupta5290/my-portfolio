@@ -6,97 +6,126 @@ import { skillsImage } from "@/utils/skill-image";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
+const skillGroups = [
+  skillsData.slice(0, 9),
+  skillsData.slice(9, 18),
+  skillsData.slice(18),
+];
+
+const categories = [
+  { label: "Backend", count: 9, color: "#16f2b3" },
+  { label: "Frontend", count: 6, color: "#a78bfa" },
+  { label: "AI / ML", count: 6, color: "#ec4899" },
+  { label: "DevOps", count: 6, color: "#f59e0b" },
+];
+
+function SkillPill({ skill }) {
+  const img = skillsImage(skill);
+  return (
+    <div className="group relative mx-2 flex-shrink-0 cursor-default">
+      <div className="relative flex items-center gap-3 px-5 py-3 rounded-xl border border-[#1b2c6840] bg-[#0d1224] hover:border-[#16f2b3]/40 hover:bg-[#16f2b305] transition-all duration-300 overflow-hidden">
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-all duration-700 ease-in-out" />
+        {img && (
+          <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+            <Image
+              src={img.src}
+              alt={skill}
+              width={28}
+              height={28}
+              className="rounded-sm object-contain"
+              style={{ width: 28, height: 28 }}
+              unoptimized
+            />
+          </div>
+        )}
+        <span className="text-[#8b98a5] group-hover:text-white text-sm font-medium tracking-wide transition-colors duration-300 whitespace-nowrap">
+          {skill}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function Skills() {
   return (
-    <div id="skills" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b] mesh-bg">
-      {/* Glow orb */}
-      <div className="orb orb-violet w-48 h-48 absolute top-6 left-1/2 opacity-15" />
-
+    <div id="skills" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+      {/* Top gradient line */}
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
           <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent w-full" />
         </div>
       </div>
 
-      <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex items-center gap-4">
-          <span className="w-16 h-[1px] bg-gradient-to-r from-transparent to-violet-500" />
-          <span className="section-heading text-xl">Skills</span>
-          <span className="w-16 h-[1px] bg-gradient-to-l from-transparent to-violet-500" />
+      {/* Section header */}
+      <div className="flex flex-col items-center mt-12 mb-10">
+        <p className="text-[#16f2b3] text-[10px] uppercase tracking-[5px] font-mono mb-4">
+          // technical expertise
+        </p>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white text-center leading-tight">
+          Skills &amp;{" "}
+          <span className="bg-gradient-to-r from-[#16f2b3] to-violet-400 bg-clip-text text-transparent">
+            Technologies
+          </span>
+        </h2>
+        <p className="text-gray-600 text-sm mt-3 font-mono">
+          {skillsData.length} tools in my arsenal
+        </p>
+        <div className="w-20 h-[2px] bg-gradient-to-r from-[#16f2b3] to-violet-500 mt-5 rounded-full" />
+      </div>
+
+      {/* Category badges */}
+      <div className="flex justify-center flex-wrap gap-3 mb-12 px-4">
+        {categories.map(({ label, count, color }) => (
+          <div
+            key={label}
+            className="flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#1b2c6860] bg-[#0d1224] hover:border-[#1b2c68] transition-colors duration-200"
+          >
+            <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
+            <span className="text-gray-400 text-xs font-mono">{label}</span>
+            <span
+              className="text-xs font-bold font-mono px-1.5 py-0.5 rounded"
+              style={{ color, backgroundColor: `${color}18` }}
+            >
+              {count}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* Marquee rows with edge fades */}
+      <div className="relative">
+        <div className="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-[#0d1224] to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-[#0d1224] to-transparent pointer-events-none" />
+
+        <div className="flex flex-col gap-5 py-2">
+          <Marquee gradient={false} speed={38} pauseOnHover direction="left">
+            {skillGroups[0].map((skill, i) => (
+              <SkillPill key={i} skill={skill} />
+            ))}
+          </Marquee>
+
+          <Marquee gradient={false} speed={28} pauseOnHover direction="right">
+            {skillGroups[1].map((skill, i) => (
+              <SkillPill key={i} skill={skill} />
+            ))}
+          </Marquee>
+
+          <Marquee gradient={false} speed={44} pauseOnHover direction="left">
+            {skillGroups[2].map((skill, i) => (
+              <SkillPill key={i} skill={skill} />
+            ))}
+          </Marquee>
         </div>
       </div>
 
-      {/* First row - left */}
-      <div className="w-full my-6">
-        <Marquee gradient={false} speed={60} pauseOnHover direction="left">
-          {skillsData.slice(0, Math.ceil(skillsData.length / 2)).map((skill, id) => {
-            const skillImg = skillsImage(skill);
-            return (
-              <div
-                key={id}
-                className="skill-card w-36 min-w-fit h-fit flex flex-col items-center justify-center m-3 sm:m-4 rounded-xl cursor-pointer group"
-              >
-                <div className="h-full w-full rounded-xl border border-[#1f223c] bg-gradient-to-b from-[#11152c] to-[#0d1224] group-hover:bg-gradient-to-b group-hover:from-[#1a1443] group-hover:to-[#0d1224] transition-all duration-300 relative overflow-hidden">
-                  {/* Top shimmer line */}
-                  <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-violet-500/50 to-transparent" />
-                  <div className="flex flex-col items-center justify-center gap-3 p-5">
-                    {skillImg && (
-                      <div className="h-9 sm:h-10 transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(139,92,246,0.6)]">
-                        <Image
-                          src={skillImg.src}
-                          alt={skill}
-                          width={40}
-                          height={40}
-                          className="h-full rounded-lg"
-                          style={{ width: "auto" }}
-                        />
-                      </div>
-                    )}
-                    <p className="text-gray-300 group-hover:text-white text-sm sm:text-base font-medium transition-colors duration-300">
-                      {skill}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </Marquee>
-      </div>
-
-      {/* Second row - right */}
-      <div className="w-full my-6">
-        <Marquee gradient={false} speed={50} pauseOnHover direction="right">
-          {skillsData.slice(Math.ceil(skillsData.length / 2)).map((skill, id) => {
-            const skillImg = skillsImage(skill);
-            return (
-              <div
-                key={id}
-                className="skill-card w-36 min-w-fit h-fit flex flex-col items-center justify-center m-3 sm:m-4 rounded-xl cursor-pointer group"
-              >
-                <div className="h-full w-full rounded-xl border border-[#1f223c] bg-gradient-to-b from-[#11152c] to-[#0d1224] group-hover:from-[#0d1224] group-hover:to-[#0a0d37] transition-all duration-300 relative overflow-hidden">
-                  <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#16f2b3]/40 to-transparent" />
-                  <div className="flex flex-col items-center justify-center gap-3 p-5">
-                    {skillImg && (
-                      <div className="h-9 sm:h-10 transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(22,242,179,0.5)]">
-                        <Image
-                          src={skillImg.src}
-                          alt={skill}
-                          width={40}
-                          height={40}
-                          className="h-full rounded-lg"
-                          style={{ width: "auto" }}
-                        />
-                      </div>
-                    )}
-                    <p className="text-gray-300 group-hover:text-[#16f2b3] text-sm sm:text-base font-medium transition-colors duration-300">
-                      {skill}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </Marquee>
+      {/* Bottom status pill */}
+      <div className="flex justify-center mt-12">
+        <div className="flex items-center gap-3 px-6 py-3 rounded-full border border-[#1b2c6840] bg-[#0d1224]/60">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#16f2b3] animate-pulse" />
+          <span className="text-gray-500 text-xs font-mono tracking-wider">
+            Always learning · Always shipping
+          </span>
+        </div>
       </div>
     </div>
   );
