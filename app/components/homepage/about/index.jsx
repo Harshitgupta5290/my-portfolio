@@ -112,16 +112,20 @@ function AboutSection() {
             style={imgTilt}
             className="relative group cursor-pointer"
           >
-            <div className="absolute -inset-3 rounded-xl bg-gradient-to-br from-violet-500/20 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
-            <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-br from-violet-500/30 to-[#16f2b3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Image
-              src={personalData.profile}
-              width={280}
-              height={350}
-              alt="Harshit Gupta"
-              className="relative rounded-xl object-cover z-10"
-              priority
-            />
+            {/* Outer glow — outside the image bounds, no overflow-hidden here */}
+            <div className="absolute -inset-3 rounded-xl bg-gradient-to-br from-violet-500/20 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md pointer-events-none" />
+            {/* Image + border glow — clipped to the image shape */}
+            <div className="relative rounded-xl overflow-hidden w-[280px] h-[350px]">
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-violet-500/30 to-[#16f2b3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
+              <Image
+                src={personalData.profile}
+                width={280}
+                height={350}
+                alt="Harshit Gupta"
+                className="w-full h-full object-cover object-top"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
