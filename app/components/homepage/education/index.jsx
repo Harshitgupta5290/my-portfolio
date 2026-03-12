@@ -34,7 +34,7 @@ function Education() {
 
       <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div className="flex justify-center items-start">
+          <div className="hidden lg:flex justify-center items-start">
             <div className="w-3/4 h-3/4">
               <AnimationLottie animationPath={lottieFile} />
             </div>
@@ -67,6 +67,9 @@ function Education() {
                             {education.title}
                           </p>
                           <p className="text-sm sm:text-base">{education.institution}</p>
+                          {education.grade && (
+                            <p className="text-xs sm:text-sm text-[#16f2b3] mt-1">{education.grade}</p>
+                          )}
                         </div>
                       </div>
                     </div>

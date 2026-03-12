@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   output: 'export',
-  basePath: '/my-portfolio',
+  basePath: '',
   sassOptions: {
     includePaths: [path.join(__dirname, 'app/css')],
   },

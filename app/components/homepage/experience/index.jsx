@@ -30,7 +30,7 @@ function Experience() {
 
       <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div className="flex justify-center items-start">
+          <div className="hidden lg:flex justify-center items-start">
             <div className="w-full h-full">
               <AnimationLottie animationPath={experience} />
             </div>
@@ -54,17 +54,27 @@ function Experience() {
                           {experience.duration}
                         </p>
                       </div>
-                      <div className="flex items-center gap-x-8 px-3 py-5">
-                        <div className="text-violet-500  transition-all duration-300 hover:scale-125">
+                      <div className="flex items-start gap-x-8 px-3 py-5">
+                        <div className="text-violet-500 transition-all duration-300 hover:scale-125 mt-1 shrink-0">
                           <BsPersonWorkspace size={36} />
                         </div>
-                        <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                        <div className="flex-1">
+                          <p className="text-base sm:text-xl mb-1 font-medium uppercase">
                             {experience.title}
                           </p>
-                          <p className="text-sm sm:text-base">
+                          <p className="text-sm sm:text-base text-gray-400 mb-3">
                             {experience.company}
                           </p>
+                          {experience.points && experience.points.length > 0 && (
+                            <ul className="flex flex-col gap-2">
+                              {experience.points.map((point, i) => (
+                                <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-gray-300">
+                                  <span className="text-[#16f2b3] mt-1 shrink-0">▹</span>
+                                  <span>{point}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </div>
                       </div>
                     </div>

@@ -1,42 +1,76 @@
+"use client"
 // @flow strict
 import Link from "next/link";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navLinks = [
+    { label: "ABOUT", href: "/#about" },
+    { label: "EXPERIENCE", href: "/#experience" },
+    { label: "SKILLS", href: "/#skills" },
+    { label: "EDUCATION", href: "/#education" },
+    { label: "PROJECTS", href: "/#projects" },
+    { label: "CERTIFICATIONS", href: "/#certifications" },
+    { label: "CONTACT", href: "/#contact" },
+  ];
+
   return (
     <nav className="bg-transparent">
       <div className="flex items-center justify-between py-5">
         <div className="flex flex-shrink-0 items-center">
-          <Link
-            href="/"
-            className=" text-[#16f2b3] text-3xl font-bold">
+          <Link href="/" className="text-[#16f2b3] text-xl sm:text-3xl font-bold">
             HARSHIT GUPTA
           </Link>
         </div>
 
-        <ul className="mt-4 flex h-screen max-h-0 w-full flex-col items-start text-sm opacity-0 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-1 md:border-0 md:opacity-100" id="navbar-default">
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#about">
-              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
-            </Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div></Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#skills"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">SKILLS</div></Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#education"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EDUCATION</div></Link>
-          </li>
-          {/* <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/blog"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">BLOGS</div></Link>
-          </li> */}
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#projects"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div></Link>
-          </li>
+        {/* Desktop nav */}
+        <ul className="hidden md:flex md:items-center md:space-x-1">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <Link
+                className="block px-4 py-2 no-underline outline-none hover:no-underline"
+                href={link.href}
+              >
+                <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">
+                  {link.label}
+                </div>
+              </Link>
+            </li>
+          ))}
         </ul>
+
+        {/* Mobile hamburger button */}
+        <button
+          className="md:hidden text-white focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {isMenuOpen && (
+        <ul className="md:hidden flex flex-col items-start pb-4 gap-1">
+          {navLinks.map((link) => (
+            <li key={link.href} className="w-full">
+              <Link
+                className="block px-4 py-2 no-underline outline-none hover:no-underline"
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">
+                  {link.label}
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 };

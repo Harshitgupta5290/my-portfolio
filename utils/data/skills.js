@@ -20,5 +20,9 @@ export const skillsData = [
   'PostgreSQL',
   'Bootstrap',
   'Figma',
-  'MaterialUI'
+  'MaterialUI',
+  'SQLAlchemy',
+  'Linux',
+  'Pandas',
+  'Sklearn'
 ]

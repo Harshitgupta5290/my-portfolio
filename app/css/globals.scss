@@ -33,7 +33,177 @@ body {
   --index: 4;
 }
 
+#sticky-card-5 {
+  --index: 5;
+}
+
 .sticky-card {
   // padding-top: calc(var(--index) * 2.5rem);
   top: calc(var(--index) * 4rem);
+}
+
+/* ─── Preloader ─────────────────────────────────────────────── */
+
+.preloader-root {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0d1224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: all;
+  overflow: hidden;
+}
+
+.preloader-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(167, 139, 250, 0.04) 1px, transparent 1px),
+    linear-gradient(to right, rgba(167, 139, 250, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.preloader-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(167, 139, 250, 0.08) 0%,
+    rgba(236, 72, 153, 0.05) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  animation: preloaderPulse 2.5s ease-in-out infinite;
+}
+
+.preloader-orbit {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.preloader-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+}
+
+.preloader-ring-outer {
+  inset: 0;
+  border-top-color: #a78bfa;
+  border-right-color: rgba(167, 139, 250, 0.25);
+  animation: preloaderSpin 1.2s linear infinite;
+}
+
+.preloader-ring-mid {
+  inset: 16px;
+  border-bottom-color: #ec4899;
+  border-left-color: rgba(236, 72, 153, 0.25);
+  animation: preloaderSpin 0.9s linear infinite reverse;
+}
+
+.preloader-ring-inner {
+  inset: 32px;
+  border-top-color: rgba(167, 139, 250, 0.5);
+  border-right-color: rgba(236, 72, 153, 0.3);
+  animation: preloaderSpin 1.6s linear infinite;
+}
+
+.preloader-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a78bfa, #ec4899);
+  box-shadow: 0 0 8px #a78bfa;
+  animation: preloaderDotPulse 1.5s ease-in-out infinite;
+}
+
+.preloader-dot-tl { top: -3px; left: calc(50% - 2.5px); }
+.preloader-dot-tr { right: -3px; top: calc(50% - 2.5px); animation-delay: 0.375s; }
+.preloader-dot-bl { bottom: -3px; left: calc(50% - 2.5px); animation-delay: 0.75s; }
+.preloader-dot-br { left: -3px; top: calc(50% - 2.5px); animation-delay: 1.125s; }
+
+.preloader-monogram {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.preloader-counter {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 1;
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  min-width: 4ch;
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+
+.preloader-percent {
+  font-size: 1.75rem;
+  opacity: 0.6;
+  letter-spacing: 0;
+}
+
+.preloader-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.25);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.preloader-bar-track {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.preloader-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a78bfa, #ec4899);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 16px rgba(167, 139, 250, 0.8), 0 0 30px rgba(236, 72, 153, 0.5);
+}
+
+@keyframes preloaderSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes preloaderPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes preloaderDotPulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.8); box-shadow: 0 0 4px #a78bfa; }
+  50% { opacity: 1; transform: scale(1.4); box-shadow: 0 0 12px #a78bfa, 0 0 20px #ec4899; }
 }

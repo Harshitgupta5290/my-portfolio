@@ -1,6 +1,8 @@
 // @flow strict
 
 import * as React from 'react';
+import Link from 'next/link';
+import { BsGithub } from 'react-icons/bs';
 
 function ProjectCard({ project }) {
 
@@ -20,7 +22,7 @@ function ProjectCard({ project }) {
           {project.name}
         </p>
       </div>
-      <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
+      <div className="overflow-x-auto border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
         <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
             <span className="mr-2 text-pink-500">const</span>
@@ -63,6 +65,18 @@ function ProjectCard({ project }) {
           </div>
           <div><span className="text-gray-400">{`};`}</span></div>
         </code>
+        {project.code && (
+          <div className="mt-4 flex justify-end">
+            <Link
+              href={project.code}
+              target="_blank"
+              className="flex items-center gap-2 text-sm text-gray-400 hover:text-[#16f2b3] transition-colors duration-300"
+            >
+              <BsGithub size={18} />
+              <span>View on GitHub</span>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
