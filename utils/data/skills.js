@@ -24,5 +24,10 @@ export const skillsData = [
   'SQLAlchemy',
   'Linux',
   'Pandas',
-  'Sklearn'
+  'Sklearn',
+  'Redis',
+  'Celery',
+  'RAG',
+  'OAuth2',
+  'JWT'
 ]
