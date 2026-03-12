@@ -10,6 +10,8 @@ import "./css/card.scss";
 import "./css/globals.scss";
 
 const PreloaderWrapper = dynamic(() => import("./components/helper/preloader-wrapper"), { ssr: false });
+const ParticleCanvas = dynamic(() => import("./components/helper/particle-canvas"), { ssr: false });
+const CustomCursor = dynamic(() => import("./components/helper/custom-cursor"), { ssr: false });
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -21,21 +23,23 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="cursor-none">
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} cursor-none`}>
         <PreloaderWrapper />
+        <CustomCursor />
+        <ParticleCanvas />
         <ToastContainer />
-        <header className="sticky top-0 z-[100] w-full border-b border-[#1b2c6830] bg-[#0d1224]/80 backdrop-blur-md">
+        <header className="sticky top-0 z-[100] w-full border-b border-[#1b2c6830] bg-[#0d1224]/85 backdrop-blur-xl">
           <div className="mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem]">
             <Navbar />
           </div>
         </header>
-        <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
+        <main className="min-h-screen relative z-10 mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
           {children}
           <ScrollToTop />
         </main>

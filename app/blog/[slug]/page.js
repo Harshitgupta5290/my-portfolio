@@ -71,16 +71,7 @@ export default function BlogPost({ params }) {
       <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent w-full mb-8" />
 
       <div
-        className="prose prose-invert prose-sm sm:prose-base max-w-none
-          prose-headings:text-white prose-headings:font-semibold
-          prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-3
-          prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2
-          prose-p:text-gray-300 prose-p:leading-relaxed
-          prose-ul:text-gray-300 prose-li:marker:text-[#16f2b3]
-          prose-strong:text-white
-          prose-a:text-[#16f2b3] prose-a:no-underline hover:prose-a:underline
-          prose-code:text-pink-400 prose-code:bg-[#0d1224] prose-code:px-1 prose-code:rounded
-          prose-pre:bg-[#0d1224] prose-pre:border prose-pre:border-[#1b2c68a0] prose-pre:rounded-lg"
+        className="blog-content"
         dangerouslySetInnerHTML={{ __html: blog.content }}
       />
 

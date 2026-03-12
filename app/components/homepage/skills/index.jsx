@@ -8,60 +8,87 @@ import Marquee from "react-fast-marquee";
 
 function Skills() {
   return (
-    <div id="skills" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
-      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
+    <div id="skills" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b] mesh-bg">
+      {/* Glow orb */}
+      <div className="orb orb-violet w-48 h-48 absolute top-6 left-1/2 opacity-15" />
 
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent  w-full" />
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent w-full" />
         </div>
       </div>
 
       <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Skills
-          </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+        <div className="flex items-center gap-4">
+          <span className="w-16 h-[1px] bg-gradient-to-r from-transparent to-violet-500" />
+          <span className="section-heading text-xl">Skills</span>
+          <span className="w-16 h-[1px] bg-gradient-to-l from-transparent to-violet-500" />
         </div>
       </div>
 
-      <div className="w-full my-12">
-        <Marquee
-          gradient={false}
-          speed={80}
-          pauseOnHover={true}
-          pauseOnClick={true}
-          delay={0}
-          play={true}
-          direction="left"
-        >
-          {skillsData.map((skill, id) => {
+      {/* First row - left */}
+      <div className="w-full my-6">
+        <Marquee gradient={false} speed={60} pauseOnHover direction="left">
+          {skillsData.slice(0, Math.ceil(skillsData.length / 2)).map((skill, id) => {
             const skillImg = skillsImage(skill);
             return (
-              <div className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
-                key={id}>
-                <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
-                  <div className="flex -translate-y-[1px] justify-center">
-                    <div className="w-3/4">
-                      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center justify-center gap-3 p-6">
+              <div
+                key={id}
+                className="skill-card w-36 min-w-fit h-fit flex flex-col items-center justify-center m-3 sm:m-4 rounded-xl cursor-pointer group"
+              >
+                <div className="h-full w-full rounded-xl border border-[#1f223c] bg-gradient-to-b from-[#11152c] to-[#0d1224] group-hover:bg-gradient-to-b group-hover:from-[#1a1443] group-hover:to-[#0d1224] transition-all duration-300 relative overflow-hidden">
+                  {/* Top shimmer line */}
+                  <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-violet-500/50 to-transparent" />
+                  <div className="flex flex-col items-center justify-center gap-3 p-5">
                     {skillImg && (
-                      <div className="h-8 sm:h-10">
+                      <div className="h-9 sm:h-10 transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(139,92,246,0.6)]">
                         <Image
                           src={skillImg.src}
                           alt={skill}
                           width={40}
                           height={40}
                           className="h-full rounded-lg"
-                          style={{ width: 'auto' }}
+                          style={{ width: "auto" }}
                         />
                       </div>
                     )}
-                    <p className="text-white text-sm sm:text-lg">
+                    <p className="text-gray-300 group-hover:text-white text-sm sm:text-base font-medium transition-colors duration-300">
+                      {skill}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </Marquee>
+      </div>
+
+      {/* Second row - right */}
+      <div className="w-full my-6">
+        <Marquee gradient={false} speed={50} pauseOnHover direction="right">
+          {skillsData.slice(Math.ceil(skillsData.length / 2)).map((skill, id) => {
+            const skillImg = skillsImage(skill);
+            return (
+              <div
+                key={id}
+                className="skill-card w-36 min-w-fit h-fit flex flex-col items-center justify-center m-3 sm:m-4 rounded-xl cursor-pointer group"
+              >
+                <div className="h-full w-full rounded-xl border border-[#1f223c] bg-gradient-to-b from-[#11152c] to-[#0d1224] group-hover:from-[#0d1224] group-hover:to-[#0a0d37] transition-all duration-300 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#16f2b3]/40 to-transparent" />
+                  <div className="flex flex-col items-center justify-center gap-3 p-5">
+                    {skillImg && (
+                      <div className="h-9 sm:h-10 transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(22,242,179,0.5)]">
+                        <Image
+                          src={skillImg.src}
+                          alt={skill}
+                          width={40}
+                          height={40}
+                          className="h-full rounded-lg"
+                          style={{ width: "auto" }}
+                        />
+                      </div>
+                    )}
+                    <p className="text-gray-300 group-hover:text-[#16f2b3] text-sm sm:text-base font-medium transition-colors duration-300">
                       {skill}
                     </p>
                   </div>
@@ -73,6 +100,6 @@ function Skills() {
       </div>
     </div>
   );
-};
+}
 
 export default Skills;
