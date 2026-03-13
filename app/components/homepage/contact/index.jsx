@@ -5,8 +5,7 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
 import { FaInstagram } from 'react-icons/fa';
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
-import { MdAlternateEmail } from "react-icons/md"; // used in contact info list
-import ContactForm from './contact-form';
+import { MdAlternateEmail } from "react-icons/md";
 
 function ContactSection() {
   return (
@@ -36,11 +35,11 @@ function ContactSection() {
         <div className="w-20 h-[2px] bg-gradient-to-r from-violet-500 to-[#16f2b3] mt-5 rounded-full" />
       </div>
 
-      {/* Main content: 3-column info + terminal */}
+      {/* Main content: info + terminal */}
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
 
         {/* Contact info + socials — left 2 cols */}
-        <div className="lg:col-span-2 flex flex-col gap-4" id="contact-form">
+        <div className="lg:col-span-2 flex flex-col gap-4">
           <p className="text-[10px] text-gray-600 uppercase tracking-widest font-mono">// contact info</p>
 
           {[
@@ -94,9 +93,82 @@ function ContactSection() {
           </div>
         </div>
 
-        {/* Contact Form — right 3 cols */}
-        <div className="lg:col-span-3">
-          <ContactForm />
+        {/* Terminal — right 3 cols */}
+        <div className="lg:col-span-3 rounded-xl border border-[#1b2c6840] bg-[#080d1a] overflow-hidden flex flex-col">
+          {/* Title bar */}
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-[#1b2c6830] flex-shrink-0">
+            <div className="flex gap-1.5">
+              <div className="w-3 h-3 rounded-full bg-red-500/70" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
+              <div className="w-3 h-3 rounded-full bg-green-500/70" />
+            </div>
+            <span className="text-gray-600 text-[10px] font-mono ml-2">harshit@portfolio ~ status.sh</span>
+            <div className="ml-auto flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              <span className="text-green-400 text-[9px] font-mono">live</span>
+            </div>
+          </div>
+
+          {/* Terminal body */}
+          <div className="p-6 font-mono text-xs flex-1 space-y-3">
+            <div>
+              <span className="text-[#16f2b3]">$</span>
+              <span className="text-gray-500"> whoami</span>
+            </div>
+            <p className="text-gray-400 pl-2">Harshit Gupta — Senior Product Engineer</p>
+
+            <div className="pt-1">
+              <span className="text-[#16f2b3]">$</span>
+              <span className="text-gray-500"> check-availability --verbose</span>
+            </div>
+            <div className="pl-2 space-y-1.5">
+              <p className="text-gray-500">
+                {'>'} Status: <span className="text-green-400 font-semibold">Available</span> for new opportunities
+              </p>
+              <p className="text-gray-500">
+                {'>'} Response time: <span className="text-[#16f2b3]">within 24 hours</span>
+              </p>
+              <p className="text-gray-500">
+                {'>'} Timezone: <span className="text-violet-400">IST (UTC+5:30)</span>
+              </p>
+              <p className="text-gray-500">
+                {'>'} Open to: <span className="text-white">Full-time · Freelance · Contract</span>
+              </p>
+              <p className="text-gray-500">
+                {'>'} Domains: <span className="text-[#16f2b3]">Backend · AI/ML · SaaS · Microservices</span>
+              </p>
+            </div>
+
+            <div className="pt-1">
+              <span className="text-[#16f2b3]">$</span>
+              <span className="text-gray-500"> cat preferred-contact.txt</span>
+            </div>
+            <div className="pl-2 space-y-1.5">
+              <p className="text-gray-500">
+                {'>'} Email: <a href={`mailto:${personalData.email}`} className="text-[#16f2b3] hover:underline">{personalData.email}</a>
+              </p>
+              <p className="text-gray-500">
+                {'>'} LinkedIn: <a href={personalData.linkedIn} target="_blank" className="text-violet-400 hover:underline">linkedin.com/in/harshitgupta1215</a>
+              </p>
+            </div>
+
+            <div className="pt-1 flex items-center">
+              <span className="text-[#16f2b3]">$</span>
+              <span className="inline-block w-2 h-3.5 bg-[#16f2b3]/60 ml-1 animate-pulse" />
+            </div>
+          </div>
+
+          {/* CTA strip */}
+          <div className="border-t border-[#1b2c6830] px-6 py-4 flex items-center justify-between">
+            <span className="text-gray-600 text-[10px] font-mono">ready to collaborate?</span>
+            <a
+              href={`mailto:${personalData.email}`}
+              className="flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-r from-violet-600 to-[#16f2b3]/80 text-white text-xs font-semibold uppercase tracking-wider hover:shadow-[0_0_20px_rgba(22,242,179,0.2)] transition-all duration-300"
+            >
+              <MdAlternateEmail size={14} />
+              Send Email
+            </a>
+          </div>
         </div>
 
       </div>
