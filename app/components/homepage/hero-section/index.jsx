@@ -162,9 +162,9 @@ function HeroSection() {
           {/* Stats row */}
           <div className="mt-12 flex items-center gap-6 flex-wrap">
             {[
-              { value: "20+", label: "Microservices" },
-              { value: "3+", label: "Years Exp" },
-              { value: "5+", label: "Projects" },
+              { value: "100K+", label: "Users Impacted" },
+              { value: "99.9%", label: "Uptime Achieved" },
+              { value: "15+", label: "Technologies" },
             ].map(({ value, label }) => (
               <div key={label} className="flex flex-col">
                 <span className="text-2xl font-extrabold text-[#16f2b3]">{value}</span>

@@ -1,18 +1,8 @@
 import axios from 'axios';
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
-// Create and configure Nodemailer transporter
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false, 
-  auth: {
-    user: process.env.EMAIL_ADDRESS,
-    pass: process.env.GMAIL_PASSKEY, 
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Helper function to send a message via Telegram
 async function sendTelegramMessage(token, chat_id, message) {
@@ -45,21 +35,22 @@ const generateEmailTemplate = (name, email, userMessage) => `
   </div>
 `;
 
-// Helper function to send an email via Nodemailer
-async function sendEmail(payload, message) {
+// Helper function to send an email via Resend
+async function sendEmail(payload) {
   const { name, email, message: userMessage } = payload;
-  
-  const mailOptions = {
-    from: "Portfolio", 
-    to: process.env.EMAIL_ADDRESS, 
-    subject: `New Message From ${name}`, 
-    text: message, 
-    html: generateEmailTemplate(name, email, userMessage), 
-    replyTo: email, 
-  };
-  
+
   try {
-    await transporter.sendMail(mailOptions);
+    const { error } = await resend.emails.send({
+      from: `Portfolio Contact <${process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'}>`,
+      to: [process.env.EMAIL_ADDRESS],
+      subject: `New Message From ${name}`,
+      html: generateEmailTemplate(name, email, userMessage),
+      reply_to: email,
+    });
+    if (error) {
+      console.error('Error while sending email via Resend:', error);
+      return false;
+    }
     return true;
   } catch (error) {
     console.error('Error while sending email:', error.message);
@@ -87,8 +78,8 @@ export async function POST(request) {
     // Send Telegram message
     const telegramSuccess = await sendTelegramMessage(token, chat_id, message);
 
-    // Send email
-    const emailSuccess = await sendEmail(payload, message);
+    // Send email via Resend
+    const emailSuccess = await sendEmail(payload);
 
     if (telegramSuccess && emailSuccess) {
       return NextResponse.json({

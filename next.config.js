@@ -2,12 +2,11 @@ const path = require('path')
 
 module.exports = {
   output: 'export',
-  basePath: '/my-portfolio',
   sassOptions: {
     includePaths: [path.join(__dirname, 'app/css')],
   },
   env: {
-    NEXT_PUBLIC_BASE_PATH: '/my-portfolio',
+    NEXT_PUBLIC_BASE_PATH: '',
   },
   images: {
     loader: 'custom',
