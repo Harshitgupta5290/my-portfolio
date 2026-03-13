@@ -173,6 +173,7 @@ function HeroSection() {
               role="button"
               target="_blank"
               href={personalData.resume}
+              download="Harshit_Gupta_Resume.pdf"
             >
               <span>Get Resume</span>
               <MdDownload size={15} />

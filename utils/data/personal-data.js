@@ -2,7 +2,7 @@ export const personalData = {
   name: "HARSHIT GUPTA",
   profile: '/profile.png',
   designation: "Full Stack Developer",
-  description: "I am a Senior Product Engineer with experience architecting and scaling production-grade SaaS platforms. At CertifyMe, I led the development of the core digital credential infrastructure, designing and implementing 20+ microservices that power credential issuance, verification, integrations, and secure data workflows for enterprise clients. Skilled in backend architecture, distributed systems, and full-stack product development using Python, Flask, MySQL, and modern JavaScript frameworks. I am actively exploring AI-driven product development, working with LLM-powered workflows, NLP systems, and intelligent automation to integrate AI capabilities into modern software platforms.",
+  description: "I build backend systems that scale — and products that matter. At CertifyMe, I architected 20+ microservices powering credential issuance, verification, and enterprise integrations for global clients. My stack runs deep: Python, Flask, MySQL, Docker, AWS, and Next.js — but what drives me is shipping things that actually work in production. I'm now channeling that into AI-first product development — LLM-powered workflows, RAG pipelines, NLP systems — turning cutting-edge models into real, revenue-generating features. If you're building something ambitious and need an engineer who can go from 0 to 1 and 1 to scale, let's talk.",
   email: 'harshitgupta5290@gmail.com',
   phone: '+919971062117',
   address: 'New Delhi, India',
@@ -14,5 +14,5 @@ export const personalData = {
   stackOverflow: '#',
   leetcode: "#",
   devUsername: "harshitgupta5290",
-  resume: "https://drive.google.com/file/d/1cpyPsgHHG7HknIv_E36BYYpW8y4on3CI/view?usp=drive_link"
+  resume: "/Harshit_Gupta_Resume.pdf"
 }

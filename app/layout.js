@@ -71,26 +71,26 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Harshit Gupta",
+              url: siteUrl,
+              email: "harshitgupta5290@gmail.com",
+              jobTitle: "Full Stack Developer",
+              description: "Full Stack Developer & AI Engineer specializing in Python, Flask, Microservices, LLMs, and cloud-native SaaS platforms.",
+              address: { "@type": "PostalAddress", addressLocality: "New Delhi", addressCountry: "IN" },
+              sameAs: [
+                "https://github.com/harshitgupta5290",
+                "https://www.linkedin.com/in/harshitgupta1215/",
+              ],
+            }),
+          }}
+        />
       </head>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Harshit Gupta",
-            url: siteUrl,
-            email: "harshitgupta5290@gmail.com",
-            jobTitle: "Full Stack Developer",
-            description: "Full Stack Developer & AI Engineer specializing in Python, Flask, Microservices, LLMs, and cloud-native SaaS platforms.",
-            address: { "@type": "PostalAddress", addressLocality: "New Delhi", addressCountry: "IN" },
-            sameAs: [
-              "https://github.com/harshitgupta5290",
-              "https://www.linkedin.com/in/harshitgupta1215/",
-            ],
-          }),
-        }}
-      />
       <body className={`${inter.className} ${spaceGrotesk.variable} cursor-none`}>
         <PreloaderWrapper />
         <CustomCursor />
@@ -107,7 +107,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
+      {process.env.NEXT_PUBLIC_GTM && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />}
     </html>
   );
 }

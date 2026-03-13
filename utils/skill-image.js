@@ -264,6 +264,6 @@ export const skillsImage = (skill) => {
     case 'redis':
       return redis;
     default:
-      break;
+      return null;
   }
 }
