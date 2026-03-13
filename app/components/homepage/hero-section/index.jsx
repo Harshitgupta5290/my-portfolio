@@ -25,20 +25,40 @@ function HeroSection() {
   const [isHovering, setIsHovering] = useState(false);
   const [activeCorner, setActiveCorner] = useState(null);
   const [typedTitle, setTypedTitle] = useState("");
-  const fullTitle = personalData.designation;
+  const titles = ["Full Stack Developer", "AI Engineer", "Software Developer"];
 
-  // Typing animation for designation
+  // Cycling typing animation
   useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      if (i <= fullTitle.length) {
-        setTypedTitle(fullTitle.slice(0, i));
-        i++;
+    let titleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+    let timeout;
+
+    const tick = () => {
+      const current = titles[titleIndex];
+      if (!deleting) {
+        charIndex++;
+        setTypedTitle(current.slice(0, charIndex));
+        if (charIndex === current.length) {
+          deleting = true;
+          timeout = setTimeout(tick, 1800);
+          return;
+        }
       } else {
-        clearInterval(interval);
+        charIndex--;
+        setTypedTitle(current.slice(0, charIndex));
+        if (charIndex === 0) {
+          deleting = false;
+          titleIndex = (titleIndex + 1) % titles.length;
+          timeout = setTimeout(tick, 400);
+          return;
+        }
       }
-    }, 65);
-    return () => clearInterval(interval);
+      timeout = setTimeout(tick, deleting ? 40 : 65);
+    };
+
+    timeout = setTimeout(tick, 400);
+    return () => clearTimeout(timeout);
   }, []);
 
   const handleMouseMove = (e) => {

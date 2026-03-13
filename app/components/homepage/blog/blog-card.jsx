@@ -1,6 +1,5 @@
 // @flow strict
 import Link from 'next/link';
-import { BsRobot } from 'react-icons/bs';
 
 const tagColors = [
   'text-[#16f2b3] border-[#16f2b3]',
@@ -24,12 +23,9 @@ function BlogCard({ blog, index = 0 }) {
           <p className="text-white/10 text-7xl font-black uppercase leading-none select-none px-4 text-center">
             {blog.tags?.[0] ?? 'BLOG'}
           </p>
-          {blog.ai_assisted && (
-            <span className="absolute top-3 right-3 flex items-center gap-1 bg-[#0d1224]/80 border border-[#16f2b3]/40 text-[#16f2b3] text-[10px] font-medium px-2 py-0.5 rounded-full">
-              <BsRobot size={10} />
-              AI-assisted
-            </span>
-          )}
+          <span className="absolute top-3 right-3 flex items-center gap-1 bg-[#0d1224]/80 border border-[#1b2c6840] text-gray-400 text-[10px] font-medium px-2 py-0.5 rounded-full">
+            Harshit Gupta
+          </span>
         </div>
 
         <div className="p-3 sm:p-4 flex flex-col flex-1">

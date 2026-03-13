@@ -1,7 +1,7 @@
 export const personalData = {
   name: "HARSHIT GUPTA",
   profile: '/profile.png',
-  designation: "Senior Product Engineer",
+  designation: "Full Stack Developer",
   description: "I am a Senior Product Engineer with experience architecting and scaling production-grade SaaS platforms. At CertifyMe, I led the development of the core digital credential infrastructure, designing and implementing 20+ microservices that power credential issuance, verification, integrations, and secure data workflows for enterprise clients. Skilled in backend architecture, distributed systems, and full-stack product development using Python, Flask, MySQL, and modern JavaScript frameworks. I am actively exploring AI-driven product development, working with LLM-powered workflows, NLP systems, and intelligent automation to integrate AI capabilities into modern software platforms.",
   email: 'harshitgupta5290@gmail.com',
   phone: '+919971062117',

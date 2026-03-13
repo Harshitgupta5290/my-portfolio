@@ -2,7 +2,6 @@
 import { blogsData } from '@/utils/data/blogs-data';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { BsRobot } from 'react-icons/bs';
 import { FaArrowLeft } from 'react-icons/fa';
 
 export async function generateStaticParams() {
@@ -56,15 +55,8 @@ export default function BlogPost({ params }) {
           </span>
           <span>·</span>
           <span>{blog.reading_time_minutes} min read</span>
-          {blog.ai_assisted && (
-            <>
-              <span>·</span>
-              <span className="flex items-center gap-1 text-[#16f2b3]">
-                <BsRobot size={12} />
-                AI-assisted, reviewed by Harshit
-              </span>
-            </>
-          )}
+          <span>·</span>
+          <span className="text-gray-500">Harshit Gupta</span>
         </div>
       </div>
 

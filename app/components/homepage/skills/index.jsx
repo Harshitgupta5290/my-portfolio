@@ -58,19 +58,10 @@ function Skills() {
 
       {/* Section header */}
       <div className="flex flex-col items-center mt-12 mb-10">
-        <p className="text-[#16f2b3] text-[10px] uppercase tracking-[5px] font-mono mb-4">
-          // technical expertise
-        </p>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-white text-center leading-tight">
-          Skills &amp;{" "}
-          <span className="bg-gradient-to-r from-[#16f2b3] to-violet-400 bg-clip-text text-transparent">
-            Technologies
-          </span>
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center leading-tight tracking-tight">
+          Skills &amp; Technologies
         </h2>
-        <p className="text-gray-600 text-sm mt-3 font-mono">
-          {skillsData.length} tools in my arsenal
-        </p>
-        <div className="w-20 h-[2px] bg-gradient-to-r from-[#16f2b3] to-violet-500 mt-5 rounded-full" />
+        <div className="w-12 h-[3px] bg-[#16f2b3] mt-5 rounded-full" />
       </div>
 
       {/* Category badges */}

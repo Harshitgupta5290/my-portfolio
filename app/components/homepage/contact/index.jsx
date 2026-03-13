@@ -19,14 +19,8 @@ function ContactSection() {
 
       {/* Section header */}
       <div className="flex flex-col items-center mt-12 mb-14">
-        <p className="text-[#16f2b3] text-[10px] uppercase tracking-[5px] font-mono mb-4">
-          // get in touch
-        </p>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-white text-center leading-tight">
-          Let&apos;s{' '}
-          <span className="bg-gradient-to-r from-violet-400 to-[#16f2b3] bg-clip-text text-transparent">
-            Connect
-          </span>
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center leading-tight tracking-tight">
+          Let&apos;s Connect
         </h2>
         <p className="text-gray-500 text-sm mt-3 max-w-md text-center leading-relaxed">
           Open to full-time roles, freelance projects, and AI/backend collaborations.
@@ -40,7 +34,6 @@ function ContactSection() {
 
         {/* Contact info + socials — left 2 cols */}
         <div className="lg:col-span-2 flex flex-col gap-4">
-          <p className="text-[10px] text-gray-600 uppercase tracking-widest font-mono">// contact info</p>
 
           {[
             { icon: MdAlternateEmail, label: "Email", value: personalData.email, href: `mailto:${personalData.email}`, color: "#16f2b3" },
@@ -58,7 +51,7 @@ function ContactSection() {
                 <Icon size={18} style={{ color }} />
               </div>
               <div className="min-w-0">
-                <p className="text-[10px] text-gray-600 uppercase tracking-widest font-mono mb-0.5">{label}</p>
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-0.5">{label}</p>
                 {href ? (
                   <a href={href} className="text-gray-300 text-sm hover:text-white transition-colors duration-200 truncate block">
                     {value}
@@ -72,7 +65,7 @@ function ContactSection() {
 
           {/* Social links */}
           <div className="mt-2">
-            <p className="text-[10px] text-gray-600 uppercase tracking-widest font-mono mb-3">// find me on</p>
+            <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-3">Find me on</p>
             <div className="flex items-center gap-3">
               {[
                 { href: personalData.github, Icon: IoLogoGithub, label: "GitHub" },
@@ -115,7 +108,7 @@ function ContactSection() {
               <span className="text-[#16f2b3]">$</span>
               <span className="text-gray-500"> whoami</span>
             </div>
-            <p className="text-gray-400 pl-2">Harshit Gupta — Senior Product Engineer</p>
+            <p className="text-gray-400 pl-2">Harshit Gupta — Full Stack Developer</p>
 
             <div className="pt-1">
               <span className="text-[#16f2b3]">$</span>
@@ -159,7 +152,7 @@ function ContactSection() {
           </div>
 
           {/* CTA strip */}
-          <div className="border-t border-[#1b2c6830] px-6 py-4 flex items-center justify-between">
+          {/* <div className="border-t border-[#1b2c6830] px-6 py-4 flex items-center justify-between">
             <span className="text-gray-600 text-[10px] font-mono">ready to collaborate?</span>
             <a
               href={`mailto:${personalData.email}`}
@@ -168,7 +161,7 @@ function ContactSection() {
               <MdAlternateEmail size={14} />
               Send Email
             </a>
-          </div>
+          </div> */}
         </div>
 
       </div>
