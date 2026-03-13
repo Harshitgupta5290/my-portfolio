@@ -14,14 +14,14 @@ function Navbar() {
   const pathname = usePathname();
 
   const navLinks = [
-    { label: "ABOUT", href: "/#about", section: "about" },
-    { label: "EXPERIENCE", href: "/#experience", section: "experience" },
-    { label: "SKILLS", href: "/#skills", section: "skills" },
-    { label: "EDUCATION", href: "/#education", section: "education" },
-    { label: "PROJECTS", href: "/#projects", section: "projects" },
-    { label: "CERTIFICATIONS", href: "/#certifications", section: "certifications" },
+    { label: "ABOUT", href: "#about", section: "about" },
+    { label: "EXPERIENCE", href: "#experience", section: "experience" },
+    { label: "SKILLS", href: "#skills", section: "skills" },
+    { label: "EDUCATION", href: "#education", section: "education" },
+    { label: "PROJECTS", href: "#projects", section: "projects" },
+    { label: "CERTIFICATIONS", href: "#certifications", section: "certifications" },
     { label: "BLOGS", href: "/blog", section: "blog" },
-    { label: "CONTACT", href: "/#contact", section: "contact" },
+    { label: "CONTACT", href: "#contact", section: "contact" },
   ];
 
   useEffect(() => {
