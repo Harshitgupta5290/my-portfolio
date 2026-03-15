@@ -22,7 +22,7 @@
 ## Demo
 
 <p align="center">
-  <a href="https://harshitgupta5290.github.io/my-portfolio" target="_blank">
+  <a href="https://harshitgupta5290.github.io/portfolio" target="_blank">
     <strong>View Live Site</strong>
   </a>
 </p>
