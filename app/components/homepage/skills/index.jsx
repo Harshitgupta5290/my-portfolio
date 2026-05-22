@@ -6,6 +6,7 @@ import { skillsImage } from "@/utils/skill-image";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { useLocale } from "@/app/context/locale-context";
+import SectionHeading from "../../helper/section-heading";
 
 // Split skills evenly across 3 marquee rows
 const rowSize = Math.ceil(skillsData.length / 3);
@@ -54,12 +55,7 @@ function Skills() {
       </div>
 
       {/* Section header */}
-      <div className="flex flex-col items-center mt-12 mb-10">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl md:text-5xl font-extrabold text-center leading-tight tracking-tight bg-gradient-to-r from-violet-400 to-[#16f2b3] bg-clip-text text-transparent">
-          {t("skills.heading")}
-        </h2>
-        <div className="w-12 h-[3px] bg-gradient-to-r from-violet-400 to-[#16f2b3] mt-5 rounded-full" />
-      </div>
+      <SectionHeading eyebrow="Tools &amp; technologies" plain="My" gradient={t("skills.heading")} className="mt-12 mb-10" />
 
       {/* Category badges — counts derived dynamically */}
       <div className="flex justify-center flex-wrap gap-3 mb-12 px-4">

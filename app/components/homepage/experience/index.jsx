@@ -5,6 +5,7 @@ import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useLocale } from "@/app/context/locale-context";
+import SectionHeading from "../../helper/section-heading";
 
 const LEVEL_BADGE_CLS = {
   senior: "text-[#16f2b3] border-[#16f2b3]/30 bg-[#16f2b3]/8",
@@ -103,17 +104,7 @@ function Experience() {
       <Image src="/section.svg" alt="" aria-hidden="true" width={1572} height={795} className="absolute top-0 -z-10" />
 
       {/* Section header */}
-      <div className="flex flex-col items-center my-5 lg:py-8 gap-3">
-        <div className="flex items-center gap-3">
-          <span aria-hidden="true" className="w-8 h-[1px] bg-[#16f2b3]" />
-          <h2 className="text-[#16f2b3] text-xs uppercase tracking-[0.25em] font-semibold">{t("experience.workHistory")}</h2>
-          <span aria-hidden="true" className="w-8 h-[1px] bg-[#16f2b3]" />
-        </div>
-        <p className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-[var(--ink)] tracking-tight">
-          {t("experience.label")}
-        </p>
-        <div aria-hidden="true" className="w-12 h-[3px] bg-[#16f2b3] rounded-full" />
-      </div>
+      <SectionHeading eyebrow={t("experience.workHistory")} plain="My" gradient={t("experience.label")} className="my-5 lg:py-8" />
 
       {/* Timeline */}
       <div className="relative py-8 px-4 sm:px-0">

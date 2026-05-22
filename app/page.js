@@ -5,13 +5,14 @@ import HashScroll from "./components/helper/hash-scroll";
 import ScrollReveal from "./components/helper/scroll-reveal";
 
 // Below-fold sections — code-split and client-only to reduce initial bundle
-const Experience     = dynamic(() => import('./components/homepage/experience'),     { ssr: false });
-const Skills         = dynamic(() => import('./components/homepage/skills'),         { ssr: false });
-const Projects       = dynamic(() => import('./components/homepage/projects'),       { ssr: false });
-const Education      = dynamic(() => import('./components/homepage/education'),      { ssr: false });
-const Certifications = dynamic(() => import('./components/homepage/certifications'), { ssr: false });
-const Blog           = dynamic(() => import('./components/homepage/blog'),           { ssr: false });
-const ContactSection = dynamic(() => import('./components/homepage/contact'),        { ssr: false });
+const Experience       = dynamic(() => import('./components/homepage/experience'),        { ssr: false });
+const Skills           = dynamic(() => import('./components/homepage/skills'),            { ssr: false });
+const Projects         = dynamic(() => import('./components/homepage/projects'),          { ssr: false });
+const DigitalProducts  = dynamic(() => import('./components/homepage/digital-products'), { ssr: false });
+const Education        = dynamic(() => import('./components/homepage/education'),         { ssr: false });
+const Certifications   = dynamic(() => import('./components/homepage/certifications'),   { ssr: false });
+const Blog             = dynamic(() => import('./components/homepage/blog'),              { ssr: false });
+const ContactSection   = dynamic(() => import('./components/homepage/contact'),          { ssr: false });
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <ScrollReveal delay={0.05}><Experience /></ScrollReveal>
       <ScrollReveal delay={0.05}><Skills /></ScrollReveal>
       <ScrollReveal delay={0.05}><Projects /></ScrollReveal>
+      <ScrollReveal delay={0.05}><DigitalProducts /></ScrollReveal>
       <ScrollReveal delay={0.05}><Education /></ScrollReveal>
       <ScrollReveal delay={0.05}><Certifications /></ScrollReveal>
       <ScrollReveal delay={0.05}><Blog /></ScrollReveal>

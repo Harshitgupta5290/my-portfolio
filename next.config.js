@@ -7,7 +7,7 @@ module.exports = {
     return [{ source: '/', destination: '/portfolio', permanent: false, basePath: false }];
   },
   basePath: '/portfolio',
-  assetPrefix: '/portfolio',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
   compress: true,
   productionBrowserSourceMaps: false,
 

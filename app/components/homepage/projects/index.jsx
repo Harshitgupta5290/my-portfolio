@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { projectsData, projectCategoryMeta } from "@/utils/data/projects-data";
 import { useLocale } from "@/app/context/locale-context";
+import SectionHeading from "../../helper/section-heading";
 
 const categoryIcons = {
   "Full Stack": FaLayerGroup,
@@ -187,16 +188,8 @@ const Projects = () => {
     <div id="projects" className="relative z-50 my-12 lg:my-24">
 
       {/* ── Section header ── */}
-      <div className="sticky top-10 z-10">
-        <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl opacity-30 pointer-events-none" />
-        <div className="flex items-center justify-start relative pb-3">
-          <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-extrabold italic tracking-tighter">
-            <span className="text-[var(--ink)]">My </span>
-            <span className="bg-gradient-to-r from-[#16f2b3] to-violet-400 bg-clip-text text-transparent">{t("projects.label")}</span>
-          </h2>
-          <div className="ml-4 flex-1 h-px bg-gradient-to-r from-[#16f2b3]/30 to-transparent" />
-        </div>
-      </div>
+      <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl opacity-30 pointer-events-none" />
+      <SectionHeading eyebrow="What I've built" plain="My" gradient={t("projects.label")} />
 
       <div className="pt-24">
         {/* ── Stats row ── */}

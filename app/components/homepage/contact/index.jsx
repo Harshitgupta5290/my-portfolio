@@ -3,6 +3,7 @@
 import { personalData } from '@/utils/data/personal-data';
 import { useLocale } from "@/app/context/locale-context";
 import Link from 'next/link';
+import SectionHeading from "../../helper/section-heading";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { BsInstagram } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
@@ -21,15 +22,12 @@ function ContactSection() {
       </div>
 
       {/* Section header */}
-      <div className="flex flex-col items-center mt-12 mb-14">
-        <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl font-extrabold text-[var(--ink)] text-center leading-tight tracking-tight">
-          {t("contact.letsConnect")}
-        </h2>
-        <p className="text-[var(--ink-2)] text-sm mt-3 max-w-md text-center leading-relaxed">
-          {t("contact.subtitle")}
-        </p>
-        <div className="w-20 h-[2px] bg-gradient-to-r from-violet-500 to-[#16f2b3] mt-5 rounded-full" />
-      </div>
+      <SectionHeading
+        eyebrow="Get in touch"
+        gradient={t("contact.letsConnect")}
+        subtitle={t("contact.subtitle")}
+        className="mt-12 mb-14"
+      />
 
       {/* Main content: info + terminal */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './blog-card';
 import { useLocale } from "@/app/context/locale-context";
+import SectionHeading from "../../helper/section-heading";
 
 function Blog() {
   const { t } = useLocale();
@@ -18,13 +19,7 @@ function Blog() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center my-5 lg:py-8 gap-3">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-black tracking-tight">
-          <span className="text-[var(--ink)]">{t("blogs.latest")} </span>
-          <span className="text-[#16f2b3]">{t("blogs.label")}</span>
-        </h2>
-        <div className="w-12 h-[3px] bg-[#16f2b3] rounded-full" />
-      </div>
+      <SectionHeading eyebrow="Thoughts &amp; writing" plain={t("blogs.latest")} gradient={t("blogs.label")} className="my-5 lg:py-8" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-8">
         {featuredBlogs.map((blog, i) => (

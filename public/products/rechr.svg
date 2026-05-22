@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0b1e"/>
+      <stop offset="100%" style="stop-color:#130d2a"/>
+    </linearGradient>
+    <!-- Purple glow gradient -->
+    <radialGradient id="glow1" cx="25%" cy="40%" r="55%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="80%" cy="60%" r="40%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Card gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1535"/>
+      <stop offset="100%" style="stop-color:#16102e"/>
+    </linearGradient>
+    <!-- Purple button gradient -->
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+    <!-- Clip for dashboard card -->
+    <clipPath id="dashClip">
+      <rect x="580" y="60" width="590" height="510" rx="16"/>
+    </clipPath>
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#7c3aed" flood-opacity="0.3"/>
+    </filter>
+    <filter id="softShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Ambient glows -->
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Subtle grid dots -->
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="0.8" fill="#7c3aed" opacity="0.12"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- ═══ LEFT SIDE ═══════════════════════════════════════════ -->
+
+  <!-- Logo pill -->
+  <rect x="48" y="52" width="120" height="36" rx="18" fill="#1e1535" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.5"/>
+  <circle cx="72" cy="70" r="11" fill="#7c3aed"/>
+  <text x="72" y="75" font-family="system-ui,sans-serif" font-size="13" font-weight="900" fill="white" text-anchor="middle">R</text>
+  <text x="102" y="75" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">Rechr</text>
+  <!-- Online dot -->
+  <circle cx="156" cy="70" r="4" fill="#22c55e"/>
+
+  <!-- Eyebrow badge -->
+  <rect x="48" y="102" width="178" height="24" rx="12" fill="#7c3aed" fill-opacity="0.15" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="137" y="118" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#a78bfa" text-anchor="middle" letter-spacing="1">✉  Cold Email Platform</text>
+
+  <!-- Main headline -->
+  <text x="48" y="180" font-family="system-ui,sans-serif" font-size="52" font-weight="900" fill="white" letter-spacing="-2">Send. Track.</text>
+  <text x="48" y="240" font-family="system-ui,sans-serif" font-size="52" font-weight="900" letter-spacing="-2">
+    <tspan fill="white">Close </tspan><tspan fill="#a78bfa">Deals.</tspan>
+  </text>
+
+  <!-- Subheadline -->
+  <text x="48" y="285" font-family="system-ui,sans-serif" font-size="15" fill="#9ca3af" font-weight="400">Self-hosted cold email platform with inbox tracking,</text>
+  <text x="48" y="306" font-family="system-ui,sans-serif" font-size="15" fill="#9ca3af" font-weight="400">sequences, analytics &amp; role-based team management.</text>
+
+  <!-- Feature list -->
+  <g transform="translate(48, 340)">
+    <!-- Row 1 -->
+    <circle cx="8" cy="8" r="8" fill="#7c3aed" fill-opacity="0.2"/>
+    <text x="8" y="12" font-family="system-ui,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">✓</text>
+    <text x="24" y="12" font-family="system-ui,sans-serif" font-size="13" fill="#d1d5db">Sequence Management</text>
+
+    <circle cx="198" cy="8" r="8" fill="#7c3aed" fill-opacity="0.2"/>
+    <text x="198" y="12" font-family="system-ui,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">✓</text>
+    <text x="214" y="12" font-family="system-ui,sans-serif" font-size="13" fill="#d1d5db">Inbox Warmup</text>
+
+    <!-- Row 2 -->
+    <circle cx="8" cy="38" r="8" fill="#7c3aed" fill-opacity="0.2"/>
+    <text x="8" y="42" font-family="system-ui,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">✓</text>
+    <text x="24" y="42" font-family="system-ui,sans-serif" font-size="13" fill="#d1d5db">Open &amp; Link Tracking</text>
+
+    <circle cx="198" cy="38" r="8" fill="#7c3aed" fill-opacity="0.2"/>
+    <text x="198" y="42" font-family="system-ui,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">✓</text>
+    <text x="214" y="42" font-family="system-ui,sans-serif" font-size="13" fill="#d1d5db">Domain Health</text>
+
+    <!-- Row 3 -->
+    <circle cx="8" cy="68" r="8" fill="#7c3aed" fill-opacity="0.2"/>
+    <text x="8" y="72" font-family="system-ui,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">✓</text>
+    <text x="24" y="72" font-family="system-ui,sans-serif" font-size="13" fill="#d1d5db">Team &amp; Role Management</text>
+
+    <circle cx="198" cy="68" r="8" fill="#7c3aed" fill-opacity="0.2"/>
+    <text x="198" y="72" font-family="system-ui,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">✓</text>
+    <text x="214" y="72" font-family="system-ui,sans-serif" font-size="13" fill="#d1d5db">Webhooks &amp; API</text>
+  </g>
+
+  <!-- Stats row -->
+  <g transform="translate(48, 470)">
+    <!-- Stat 1 -->
+    <rect x="0" y="0" width="120" height="56" rx="10" fill="#1e1535" stroke="#2d1f50" stroke-width="1"/>
+    <text x="14" y="22" font-family="system-ui,sans-serif" font-size="10" fill="#9ca3af" letter-spacing="0.5">PLANS</text>
+    <text x="14" y="46" font-family="system-ui,sans-serif" font-size="22" font-weight="900" fill="#a78bfa">4</text>
+
+    <!-- Stat 2 -->
+    <rect x="132" y="0" width="120" height="56" rx="10" fill="#1e1535" stroke="#2d1f50" stroke-width="1"/>
+    <text x="14" y="22" font-family="system-ui,sans-serif" font-size="10" fill="#9ca3af" letter-spacing="0.5" transform="translate(132,0)">SELF-HOST</text>
+    <text x="14" y="46" font-family="system-ui,sans-serif" font-size="22" font-weight="900" fill="#22c55e" transform="translate(132,0)">Free</text>
+
+    <!-- Stat 3 -->
+    <rect x="264" y="0" width="120" height="56" rx="10" fill="#1e1535" stroke="#2d1f50" stroke-width="1"/>
+    <text x="14" y="22" font-family="system-ui,sans-serif" font-size="10" fill="#9ca3af" letter-spacing="0.5" transform="translate(264,0)">USERS</text>
+    <text x="14" y="46" font-family="system-ui,sans-serif" font-size="22" font-weight="900" fill="white" transform="translate(264,0)">18+</text>
+  </g>
+
+  <!-- ═══ RIGHT SIDE — DASHBOARD MOCKUP ═══════════════════════ -->
+  <!-- Outer card shadow -->
+  <rect x="580" y="60" width="590" height="510" rx="16" fill="#1a1030" stroke="#2d1f50" stroke-width="1" filter="url(#shadow)"/>
+
+  <!-- Sidebar -->
+  <rect x="580" y="60" width="155" height="510" rx="0" fill="#13102a"/>
+  <rect x="580" y="60" width="155" height="510" rx="16" fill="#13102a" clip-path="url(#dashClip)"/>
+  <!-- Sidebar top — logo area -->
+  <circle cx="610" cy="95" r="14" fill="#7c3aed"/>
+  <text x="610" y="100" font-family="system-ui,sans-serif" font-size="13" font-weight="900" fill="white" text-anchor="middle">R</text>
+  <text x="634" y="100" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white">Rechr</text>
+  <circle cx="716" cy="95" r="4" fill="#22c55e"/>
+
+  <!-- Sidebar nav items -->
+  <rect x="590" y="122" width="135" height="28" rx="8" fill="#7c3aed" fill-opacity="0.25"/>
+  <rect x="596" y="132" width="8" height="8" rx="2" fill="#a78bfa"/>
+  <text x="612" y="141" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#c4b5fd">Dashboard</text>
+
+  <rect x="596" y="162" width="8" height="8" rx="2" fill="#6b7280"/>
+  <text x="612" y="171" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Campaigns</text>
+
+  <rect x="596" y="188" width="8" height="8" rx="2" fill="#6b7280"/>
+  <text x="612" y="197" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Templates</text>
+
+  <rect x="596" y="214" width="8" height="8" rx="2" fill="#6b7280"/>
+  <text x="612" y="223" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Analytics</text>
+
+  <rect x="596" y="240" width="8" height="8" rx="2" fill="#6b7280"/>
+  <text x="612" y="249" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Domain Health</text>
+
+  <rect x="596" y="266" width="8" height="8" rx="2" fill="#6b7280"/>
+  <text x="612" y="275" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Warmup</text>
+
+  <rect x="596" y="292" width="8" height="8" rx="2" fill="#6b7280"/>
+  <text x="612" y="301" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Webhooks</text>
+
+  <rect x="596" y="318" width="8" height="8" rx="2" fill="#6b7280"/>
+  <text x="612" y="327" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Team</text>
+
+  <!-- ADMIN section -->
+  <text x="596" y="368" font-family="system-ui,sans-serif" font-size="9" fill="#4b5563" font-weight="700" letter-spacing="1">ADMIN</text>
+  <rect x="596" y="380" width="8" height="8" rx="2" fill="#6b7280"/>
+  <text x="612" y="389" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Platform Stats</text>
+  <rect x="596" y="406" width="8" height="8" rx="2" fill="#6b7280"/>
+  <text x="612" y="415" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Users</text>
+  <rect x="596" y="432" width="8" height="8" rx="2" fill="#6b7280"/>
+  <text x="612" y="441" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Plans</text>
+
+  <!-- Sidebar user -->
+  <circle cx="606" cy="537" r="12" fill="#7c3aed"/>
+  <text x="606" y="541" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">H</text>
+  <text x="624" y="534" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="white">Harshit Gu...</text>
+  <text x="624" y="547" font-family="system-ui,sans-serif" font-size="9" fill="#9ca3af">harshitgup...</text>
+  <rect x="694" y="527" width="36" height="18" rx="9" fill="#7c3aed"/>
+  <text x="712" y="539" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="700">Admin</text>
+
+  <!-- Sidebar right border -->
+  <line x1="735" y1="60" x2="735" y2="570" stroke="#2d1f50" stroke-width="1"/>
+
+  <!-- ── Main content area ── -->
+  <rect x="735" y="60" width="435" height="510" fill="#100d22" clip-path="url(#dashClip)"/>
+
+  <!-- Topbar -->
+  <text x="755" y="96" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="white">Dashboard</text>
+  <text x="755" y="114" font-family="system-ui,sans-serif" font-size="10" fill="#6b7280">Your outreach at a glance</text>
+  <!-- New Campaign button -->
+  <rect x="1060" y="75" width="120" height="30" rx="15" fill="url(#btnGrad)"/>
+  <text x="1120" y="95" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">+ New Campaign</text>
+
+  <!-- Stat cards row -->
+  <!-- Card 1 -->
+  <rect x="755" y="132" width="93" height="62" rx="8" fill="#1e1535" stroke="#2d1f50" stroke-width="1"/>
+  <text x="765" y="150" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280" letter-spacing="0.5">CAMPAIGNS</text>
+  <text x="765" y="174" font-family="system-ui,sans-serif" font-size="22" font-weight="900" fill="white">18</text>
+  <text x="765" y="188" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280">active</text>
+  <!-- Card 2 -->
+  <rect x="856" y="132" width="93" height="62" rx="8" fill="#1e1535" stroke="#2d1f50" stroke-width="1"/>
+  <text x="866" y="150" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280" letter-spacing="0.5">EMAILS SENT</text>
+  <text x="866" y="174" font-family="system-ui,sans-serif" font-size="22" font-weight="900" fill="white">2.4k</text>
+  <text x="866" y="188" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280">all time</text>
+  <!-- Card 3 -->
+  <rect x="957" y="132" width="93" height="62" rx="8" fill="#1e1535" stroke="#2d1f50" stroke-width="1"/>
+  <text x="967" y="150" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280" letter-spacing="0.5">OPEN RATE</text>
+  <text x="967" y="174" font-family="system-ui,sans-serif" font-size="22" font-weight="900" fill="#22c55e">68%</text>
+  <text x="967" y="188" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280">avg across</text>
+  <!-- Card 4 -->
+  <rect x="1058" y="132" width="93" height="62" rx="8" fill="#1e1535" stroke="#2d1f50" stroke-width="1"/>
+  <text x="1068" y="150" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280" letter-spacing="0.5">ACTIVE NOW</text>
+  <text x="1068" y="174" font-family="system-ui,sans-serif" font-size="22" font-weight="900" fill="#a78bfa">5</text>
+  <text x="1068" y="188" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280">of 18 camps</text>
+
+  <!-- Recent Campaigns card -->
+  <rect x="755" y="208" width="270" height="230" rx="8" fill="#1e1535" stroke="#2d1f50" stroke-width="1"/>
+  <text x="770" y="228" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="white">Recent Campaigns</text>
+  <text x="990" y="228" font-family="system-ui,sans-serif" font-size="10" fill="#7c3aed" text-anchor="end">View all →</text>
+
+  <!-- campaign rows -->
+  <circle cx="773" cy="258" r="4" fill="#7c3aed"/>
+  <text x="786" y="263" font-family="system-ui,sans-serif" font-size="11" fill="white" font-weight="600">Q4 Outreach</text>
+  <rect x="890" y="251" width="38" height="16" rx="8" fill="#22c55e" fill-opacity="0.15"/>
+  <text x="909" y="262" font-family="system-ui,sans-serif" font-size="8" fill="#22c55e" text-anchor="middle" font-weight="700">Active</text>
+  <text x="786" y="278" font-family="system-ui,sans-serif" font-size="9" fill="#6b7280">124 sent · 45 opens · H3</text>
+  <!-- Bar -->
+  <rect x="786" y="284" width="192" height="3" rx="2" fill="#2d1f50"/>
+  <rect x="786" y="284" width="130" height="3" rx="2" fill="#7c3aed"/>
+
+  <circle cx="773" cy="308" r="4" fill="#4f46e5"/>
+  <text x="786" y="313" font-family="system-ui,sans-serif" font-size="11" fill="white" font-weight="600">SaaS Founders List</text>
+  <rect x="890" y="306" width="36" height="16" rx="8" fill="#6b7280" fill-opacity="0.2"/>
+  <text x="908" y="317" font-family="system-ui,sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">Draft</text>
+  <text x="786" y="328" font-family="system-ui,sans-serif" font-size="9" fill="#6b7280">0 sent · 0 opens · H1</text>
+  <rect x="786" y="334" width="192" height="3" rx="2" fill="#2d1f50"/>
+  <rect x="786" y="334" width="40" height="3" rx="2" fill="#4f46e5"/>
+
+  <circle cx="773" cy="358" r="4" fill="#22c55e"/>
+  <text x="786" y="363" font-family="system-ui,sans-serif" font-size="11" fill="white" font-weight="600">Dev Newsletter</text>
+  <rect x="890" y="356" width="48" height="16" rx="8" fill="#16a34a" fill-opacity="0.15"/>
+  <text x="914" y="367" font-family="system-ui,sans-serif" font-size="8" fill="#22c55e" text-anchor="middle" font-weight="700">Completed</text>
+  <text x="786" y="378" font-family="system-ui,sans-serif" font-size="9" fill="#6b7280">980 sent · 612 opens · H5</text>
+  <rect x="786" y="384" width="192" height="3" rx="2" fill="#2d1f50"/>
+  <rect x="786" y="384" width="175" height="3" rx="2" fill="#22c55e"/>
+
+  <circle cx="773" cy="408" r="4" fill="#f59e0b"/>
+  <text x="786" y="413" font-family="system-ui,sans-serif" font-size="11" fill="white" font-weight="600">Cold Pitch v2</text>
+  <rect x="890" y="406" width="38" height="16" rx="8" fill="#f59e0b" fill-opacity="0.15"/>
+  <text x="909" y="417" font-family="system-ui,sans-serif" font-size="8" fill="#f59e0b" text-anchor="middle" font-weight="700">Paused</text>
+  <text x="786" y="428" font-family="system-ui,sans-serif" font-size="9" fill="#6b7280">256 sent · 88 opens · H2</text>
+  <rect x="786" y="433" width="192" height="3" rx="2" fill="#2d1f50"/>
+  <rect x="786" y="433" width="80" height="3" rx="2" fill="#f59e0b"/>
+
+  <!-- Quick Actions card -->
+  <rect x="1037" y="208" width="118" height="142" rx="8" fill="#1e1535" stroke="#2d1f50" stroke-width="1"/>
+  <text x="1052" y="228" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="white">Quick Actions</text>
+  <!-- Items -->
+  <circle cx="1056" cy="252" r="6" fill="#7c3aed" fill-opacity="0.3"/>
+  <text x="1070" y="256" font-family="system-ui,sans-serif" font-size="10" fill="#d1d5db">+ New Campaign</text>
+  <circle cx="1056" cy="274" r="6" fill="#7c3aed" fill-opacity="0.3"/>
+  <text x="1070" y="278" font-family="system-ui,sans-serif" font-size="10" fill="#d1d5db">New Template</text>
+  <circle cx="1056" cy="296" r="6" fill="#7c3aed" fill-opacity="0.3"/>
+  <text x="1070" y="300" font-family="system-ui,sans-serif" font-size="10" fill="#d1d5db">View Analytics</text>
+  <circle cx="1056" cy="318" r="6" fill="#7c3aed" fill-opacity="0.3"/>
+  <text x="1070" y="322" font-family="system-ui,sans-serif" font-size="10" fill="#d1d5db">Add Inbox</text>
+  <circle cx="1056" cy="340" r="6" fill="#7c3aed" fill-opacity="0.3"/>
+  <text x="1070" y="344" font-family="system-ui,sans-serif" font-size="10" fill="#d1d5db">Warmup DNS</text>
+
+  <!-- Analytics mini card -->
+  <rect x="1037" y="362" width="118" height="76" rx="8" fill="#1e1535" stroke="#2d1f50" stroke-width="1"/>
+  <text x="1052" y="380" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="white">Open Rate</text>
+  <!-- mini bar chart -->
+  <rect x="1052" y="398" width="10" height="24" rx="2" fill="#7c3aed" fill-opacity="0.3"/>
+  <rect x="1066" y="390" width="10" height="32" rx="2" fill="#7c3aed" fill-opacity="0.5"/>
+  <rect x="1080" y="385" width="10" height="37" rx="2" fill="#7c3aed" fill-opacity="0.7"/>
+  <rect x="1094" y="376" width="10" height="46" rx="2" fill="#7c3aed"/>
+  <rect x="1108" y="380" width="10" height="42" rx="2" fill="#22c55e"/>
+  <text x="1130" y="415" font-family="system-ui,sans-serif" font-size="16" font-weight="900" fill="#22c55e" text-anchor="end">68%</text>
+
+  <!-- Bottom plan tier row -->
+  <rect x="755" y="450" width="396" height="82" rx="8" fill="#1e1535" stroke="#2d1f50" stroke-width="1"/>
+  <text x="770" y="470" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="white">Plan Tiers</text>
+
+  <!-- Free -->
+  <rect x="770" y="480" width="82" height="38" rx="6" fill="#13102a" stroke="#2d1f50" stroke-width="1"/>
+  <text x="811" y="498" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#9ca3af" text-anchor="middle">Free</text>
+  <text x="811" y="512" font-family="system-ui,sans-serif" font-size="11" font-weight="900" fill="white" text-anchor="middle">$0/mo</text>
+
+  <!-- Starter -->
+  <rect x="860" y="480" width="82" height="38" rx="6" fill="#13102a" stroke="#2d1f50" stroke-width="1"/>
+  <text x="901" y="498" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#9ca3af" text-anchor="middle">Starter</text>
+  <text x="901" y="512" font-family="system-ui,sans-serif" font-size="11" font-weight="900" fill="#a78bfa" text-anchor="middle">$29/mo</text>
+
+  <!-- Pro -->
+  <rect x="950" y="480" width="82" height="38" rx="6" fill="#7c3aed" fill-opacity="0.15" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="991" y="498" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#a78bfa" text-anchor="middle">Pro</text>
+  <text x="991" y="512" font-family="system-ui,sans-serif" font-size="11" font-weight="900" fill="#7c3aed" text-anchor="middle">$79/mo</text>
+
+  <!-- Enterprise -->
+  <rect x="1040" y="480" width="100" height="38" rx="6" fill="#13102a" stroke="#2d1f50" stroke-width="1"/>
+  <text x="1090" y="498" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#9ca3af" text-anchor="middle">Enterprise</text>
+  <text x="1090" y="512" font-family="system-ui,sans-serif" font-size="11" font-weight="900" fill="#f59e0b" text-anchor="middle">$199/mo</text>
+
+  <!-- Version tag -->
+  <text x="755" y="560" font-family="system-ui,sans-serif" font-size="9" fill="#4b5563">Rechr v2.0</text>
+
+  <!-- ═══ Decorative elements ═══ -->
+  <!-- Top-right purple blob -->
+  <ellipse cx="1150" cy="80" rx="80" ry="80" fill="#7c3aed" fill-opacity="0.08"/>
+  <!-- Bottom-left accent -->
+  <ellipse cx="30" cy="580" rx="60" ry="60" fill="#4f46e5" fill-opacity="0.07"/>
+
+  <!-- Bottom tag line on left -->
+  <text x="48" y="598" font-family="system-ui,sans-serif" font-size="11" fill="#4b5563">rechr.vercel.app  ·  Self-hosted  ·  Open source friendly</text>
+</svg>

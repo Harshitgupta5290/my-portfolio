@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1f1a"/>
+      <stop offset="100%" style="stop-color:#0a1a14"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="65%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.18"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="15%" cy="70%" r="40%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="phoneGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="135%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#111f1a"/>
+      <stop offset="100%" style="stop-color:#0d1a16"/>
+    </linearGradient>
+    <linearGradient id="screenGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#131f1a"/>
+      <stop offset="100%" style="stop-color:#0f1c17"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.1"/>
+    </linearGradient>
+    <filter id="phoneShadow">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#10b981" flood-opacity="0.25"/>
+    </filter>
+    <filter id="phoneShadow2">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="softGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#10b981" flood-opacity="0.5"/>
+    </filter>
+    <!-- Clip paths for phone screens -->
+    <clipPath id="screen1">
+      <rect x="668" y="72" width="192" height="416" rx="14"/>
+    </clipPath>
+    <clipPath id="screen2">
+      <rect x="898" y="108" width="180" height="392" rx="14"/>
+    </clipPath>
+    <clipPath id="screen3">
+      <rect x="470" y="118" width="172" height="374" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Dot grid -->
+  <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="0.8" fill="#10b981" opacity="0.1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Large glow behind phones -->
+  <ellipse cx="820" cy="315" rx="320" ry="260" fill="url(#phoneGlow)"/>
+
+  <!-- Decorative rings -->
+  <circle cx="820" cy="315" r="290" fill="none" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.12"/>
+  <circle cx="820" cy="315" r="240" fill="none" stroke="#10b981" stroke-width="0.5" stroke-opacity="0.1"/>
+
+  <!-- ═══ LEFT — BRAND ═════════════════════════════════════════ -->
+
+  <!-- App icon — green bg + lightning bolt -->
+  <rect x="48" y="52" width="56" height="56" rx="18" fill="url(#tealGrad)" filter="url(#softGlow)"/>
+  <!-- Lightning bolt path -->
+  <path d="M82 58 L68 78 L76 78 L70 100 L86 76 L78 76 Z" fill="white" fill-opacity="0.95"/>
+
+  <text x="116" y="76" font-family="system-ui,sans-serif" font-size="22" font-weight="900" fill="white" letter-spacing="-0.5">LifeKit Pro</text>
+  <text x="116" y="96" font-family="system-ui,sans-serif" font-size="11" fill="#6ee7b7">Mobile Productivity App</text>
+
+  <!-- Coming soon pill -->
+  <rect x="48" y="124" width="136" height="26" rx="13" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="4 2"/>
+  <text x="116" y="141" font-family="system-ui,sans-serif" font-size="10" font-weight="800" fill="#fbbf24" text-anchor="middle" letter-spacing="1.5">⏳  COMING SOON</text>
+
+  <!-- Headline -->
+  <text x="48" y="198" font-family="system-ui,sans-serif" font-size="44" font-weight="900" fill="white" letter-spacing="-2">Live With</text>
+  <text x="48" y="250" font-family="system-ui,sans-serif" font-size="44" font-weight="900" fill="#10b981" letter-spacing="-2">Intention.</text>
+  <text x="48" y="302" font-family="system-ui,sans-serif" font-size="44" font-weight="900" fill="white" letter-spacing="-2">Ship Your</text>
+  <text x="48" y="354" font-family="system-ui,sans-serif" font-size="44" font-weight="900" fill="#f59e0b" letter-spacing="-2">Best Work.</text>
+
+  <!-- Description -->
+  <text x="48" y="392" font-family="system-ui,sans-serif" font-size="13.5" fill="#6ee7b7" fill-opacity="0.75">Mobile app for habits, goals &amp; health —</text>
+  <text x="48" y="412" font-family="system-ui,sans-serif" font-size="13.5" fill="#6ee7b7" fill-opacity="0.75">built to help you perform at your best.</text>
+
+  <!-- Feature pills -->
+  <rect x="48" y="432" width="112" height="26" rx="13" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="104" y="449" font-family="system-ui,sans-serif" font-size="10.5" font-weight="600" fill="#6ee7b7" text-anchor="middle">🎯 Goal Tracking</text>
+
+  <rect x="170" y="432" width="110" height="26" rx="13" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="225" y="449" font-family="system-ui,sans-serif" font-size="10.5" font-weight="600" fill="#fcd34d" text-anchor="middle">🔥 Habit Streaks</text>
+
+  <rect x="48" y="468" width="120" height="26" rx="13" fill="#6366f1" fill-opacity="0.12" stroke="#6366f1" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="108" y="485" font-family="system-ui,sans-serif" font-size="10.5" font-weight="600" fill="#a5b4fc" text-anchor="middle">❤️ Health Metrics</text>
+
+  <rect x="178" y="468" width="118" height="26" rx="13" fill="#ec4899" fill-opacity="0.12" stroke="#ec4899" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="237" y="485" font-family="system-ui,sans-serif" font-size="10.5" font-weight="600" fill="#f9a8d4" text-anchor="middle">📊 Analytics</text>
+
+  <!-- Platform badges -->
+  <rect x="48" y="512" width="90" height="30" rx="8" fill="#1c2e28" stroke="#2d4a3e" stroke-width="1"/>
+  <text x="93" y="531" font-family="system-ui,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">🍎 iOS</text>
+
+  <rect x="148" y="512" width="100" height="30" rx="8" fill="#1c2e28" stroke="#2d4a3e" stroke-width="1"/>
+  <text x="198" y="531" font-family="system-ui,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">🤖 Android</text>
+
+  <!-- ═══ PHONE 3 — LEFT (back, habits screen) ═══════════════════ -->
+  <g transform="rotate(-8, 556, 305)">
+    <!-- Phone frame -->
+    <rect x="462" y="108" width="188" height="402" rx="28" fill="#111" stroke="#2d4a3e" stroke-width="2" filter="url(#phoneShadow2)"/>
+    <!-- Screen bg -->
+    <rect x="470" y="118" width="172" height="382" rx="20" fill="url(#screenGrad2)"/>
+    <!-- Status bar -->
+    <text x="480" y="136" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280">9:41</text>
+    <rect x="530" y="115" width="40" height="10" rx="5" fill="#111"/>
+    <!-- Screen content clipped -->
+    <g clip-path="url(#screen3)">
+      <!-- Header -->
+      <text x="482" y="160" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="white">Habits</text>
+      <text x="482" y="175" font-family="system-ui,sans-serif" font-size="8.5" fill="#6ee7b7">9 / 12 today</text>
+
+      <!-- Habit rows -->
+      <!-- Row 1 -->
+      <rect x="480" y="184" width="154" height="36" rx="10" fill="#10b981" fill-opacity="0.12"/>
+      <circle cx="498" cy="202" r="9" fill="#10b981"/>
+      <text x="498" y="206" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="700">✓</text>
+      <text x="514" y="199" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="white">Morning Run</text>
+      <text x="514" y="212" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280">🔥 47 day streak</text>
+
+      <!-- Row 2 -->
+      <rect x="480" y="228" width="154" height="36" rx="10" fill="#f59e0b" fill-opacity="0.1"/>
+      <circle cx="498" cy="246" r="9" fill="#f59e0b"/>
+      <text x="498" y="250" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="700">✓</text>
+      <text x="514" y="243" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="white">Read 30 min</text>
+      <text x="514" y="256" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280">🔥 12 day streak</text>
+
+      <!-- Row 3 -->
+      <rect x="480" y="272" width="154" height="36" rx="10" fill="#1e2e28" stroke="#2d4a3e" stroke-width="1"/>
+      <circle cx="498" cy="290" r="9" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+      <text x="514" y="287" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#9ca3af">Meditate</text>
+      <text x="514" y="300" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280">10 min · pending</text>
+
+      <!-- Row 4 -->
+      <rect x="480" y="316" width="154" height="36" rx="10" fill="#1e2e28" stroke="#2d4a3e" stroke-width="1"/>
+      <circle cx="498" cy="334" r="9" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+      <text x="514" y="331" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#9ca3af">Cold Shower</text>
+      <text x="514" y="344" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280">Morning · pending</text>
+
+      <!-- Progress arc area -->
+      <text x="482" y="380" font-family="system-ui,sans-serif" font-size="8.5" fill="#6b7280">Weekly completion</text>
+      <rect x="480" y="386" width="154" height="6" rx="3" fill="#1e2e28"/>
+      <rect x="480" y="386" width="106" height="6" rx="3" fill="#10b981"/>
+      <text x="635" y="393" font-family="system-ui,sans-serif" font-size="8" fill="#10b981" text-anchor="end" font-weight="700">69%</text>
+
+      <!-- Bottom nav -->
+      <rect x="470" y="462" width="172" height="38" rx="0" fill="#0d1a14"/>
+      <text x="496" y="484" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">🏠</text>
+      <text x="531" y="484" font-family="system-ui,sans-serif" font-size="8" fill="#10b981" text-anchor="middle">🎯</text>
+      <text x="566" y="484" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">❤️</text>
+      <text x="601" y="484" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">📊</text>
+      <rect x="521" y="474" width="20" height="20" rx="10" fill="#10b981" fill-opacity="0.15"/>
+    </g>
+    <!-- Home indicator -->
+    <rect x="524" y="498" width="52" height="4" rx="2" fill="#3d5a4e"/>
+  </g>
+
+  <!-- ═══ PHONE 1 — CENTER (main, home screen) ═══════════════════ -->
+  <g filter="url(#phoneShadow)">
+    <!-- Phone frame -->
+    <rect x="660" y="58" width="208" height="450" rx="32" fill="#1a1a1a" stroke="#10b981" stroke-width="1.5"/>
+    <!-- Side buttons -->
+    <rect x="658" y="140" width="3" height="36" rx="2" fill="#222"/>
+    <rect x="658" y="185" width="3" height="36" rx="2" fill="#222"/>
+    <rect x="869" y="160" width="3" height="60" rx="2" fill="#222"/>
+    <!-- Screen -->
+    <rect x="668" y="72" width="192" height="422" rx="20" fill="url(#screenGrad)"/>
+
+    <!-- Dynamic island -->
+    <rect x="736" y="82" width="56" height="14" rx="7" fill="#111"/>
+
+    <!-- Status bar -->
+    <text x="678" y="102" font-family="system-ui,sans-serif" font-size="8" fill="#9ca3af" font-weight="600">9:41</text>
+    <text x="846" y="102" font-family="system-ui,sans-serif" font-size="8" fill="#9ca3af" text-anchor="end">●●●● WiFi 🔋</text>
+
+    <!-- Greeting -->
+    <text x="680" y="128" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Good morning 👋</text>
+    <text x="680" y="148" font-family="system-ui,sans-serif" font-size="16" font-weight="900" fill="white">Harshit</text>
+
+    <!-- Streak badge -->
+    <rect x="800" y="126" width="54" height="26" rx="13" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="1"/>
+    <text x="827" y="143" font-family="system-ui,sans-serif" font-size="10" font-weight="800" fill="#f59e0b" text-anchor="middle">🔥 47</text>
+
+    <!-- Today ring / progress summary -->
+    <!-- Outer ring bg -->
+    <circle cx="764" cy="218" r="52" fill="none" stroke="#1e3028" stroke-width="10"/>
+    <!-- Progress ring (teal, ~72%) -->
+    <circle cx="764" cy="218" r="52" fill="none" stroke="#10b981" stroke-width="10"
+      stroke-dasharray="235 327" stroke-dashoffset="82" stroke-linecap="round"/>
+    <!-- Inner label -->
+    <text x="764" y="213" font-family="system-ui,sans-serif" font-size="20" font-weight="900" fill="white" text-anchor="middle">72%</text>
+    <text x="764" y="228" font-family="system-ui,sans-serif" font-size="8.5" fill="#6b7280" text-anchor="middle">Day Complete</text>
+
+    <!-- Stats under ring -->
+    <text x="700" y="290" font-family="system-ui,sans-serif" font-size="18" font-weight="900" fill="#10b981" text-anchor="middle">9</text>
+    <text x="700" y="303" font-family="system-ui,sans-serif" font-size="7.5" fill="#6b7280" text-anchor="middle">habits done</text>
+
+    <text x="764" y="290" font-family="system-ui,sans-serif" font-size="18" font-weight="900" fill="#f59e0b" text-anchor="middle">5</text>
+    <text x="764" y="303" font-family="system-ui,sans-serif" font-size="7.5" fill="#6b7280" text-anchor="middle">goals active</text>
+
+    <text x="828" y="290" font-family="system-ui,sans-serif" font-size="18" font-weight="900" fill="#6366f1" text-anchor="middle">4.5</text>
+    <text x="828" y="303" font-family="system-ui,sans-serif" font-size="7.5" fill="#6b7280" text-anchor="middle">focus hrs</text>
+
+    <!-- Today tasks section -->
+    <text x="680" y="328" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="white">Today's Focus</text>
+    <text x="850" y="328" font-family="system-ui,sans-serif" font-size="9" fill="#10b981" text-anchor="end">See all</text>
+
+    <!-- Task 1 — done -->
+    <rect x="680" y="335" width="168" height="32" rx="10" fill="#10b981" fill-opacity="0.1"/>
+    <circle cx="694" cy="351" r="8" fill="#10b981"/>
+    <text x="694" y="355" font-family="system-ui,sans-serif" font-size="8" fill="white" text-anchor="middle" font-weight="700">✓</text>
+    <text x="708" y="348" font-family="system-ui,sans-serif" font-size="10" fill="#9ca3af" text-decoration="line-through">Morning run</text>
+    <text x="708" y="361" font-family="system-ui,sans-serif" font-size="7.5" fill="#6b7280">Done · 6:15 AM</text>
+
+    <!-- Task 2 — active -->
+    <rect x="680" y="374" width="168" height="32" rx="10" fill="#f59e0b" fill-opacity="0.1"/>
+    <circle cx="694" cy="390" r="8" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+    <circle cx="694" cy="390" r="3" fill="#f59e0b"/>
+    <text x="708" y="387" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="white">Deep work block</text>
+    <text x="708" y="400" font-family="system-ui,sans-serif" font-size="7.5" fill="#f59e0b">In progress · 9 AM</text>
+
+    <!-- Task 3 — pending -->
+    <rect x="680" y="413" width="168" height="32" rx="10" fill="#1a2922" stroke="#2d4a3e" stroke-width="1"/>
+    <circle cx="694" cy="429" r="8" fill="none" stroke="#3d5a4e" stroke-width="1.5"/>
+    <text x="708" y="426" font-family="system-ui,sans-serif" font-size="10" fill="#6b7280">Evening journal</text>
+    <text x="708" y="439" font-family="system-ui,sans-serif" font-size="7.5" fill="#4b5563">9 PM · pending</text>
+
+    <!-- Bottom nav -->
+    <rect x="668" y="454" width="192" height="40" rx="0" fill="#0d1a14"/>
+    <rect x="668" y="454" width="192" height="40" rx="0" fill="url(#bg)" fill-opacity="0.5"/>
+    <!-- Nav icons + labels -->
+    <text x="700" y="470" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">🏠</text>
+    <text x="700" y="484" font-family="system-ui,sans-serif" font-size="7" fill="#10b981" text-anchor="middle" font-weight="700">Home</text>
+    <text x="735" y="470" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">🎯</text>
+    <text x="735" y="484" font-family="system-ui,sans-serif" font-size="7" fill="#6b7280" text-anchor="middle">Goals</text>
+    <text x="770" y="470" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">📋</text>
+    <text x="770" y="484" font-family="system-ui,sans-serif" font-size="7" fill="#6b7280" text-anchor="middle">Habits</text>
+    <text x="805" y="470" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">❤️</text>
+    <text x="805" y="484" font-family="system-ui,sans-serif" font-size="7" fill="#6b7280" text-anchor="middle">Health</text>
+    <text x="840" y="470" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">📊</text>
+    <text x="840" y="484" font-family="system-ui,sans-serif" font-size="7" fill="#6b7280" text-anchor="middle">Stats</text>
+    <!-- active tab dot -->
+    <circle cx="700" cy="456" r="2" fill="#10b981"/>
+
+    <!-- Home indicator -->
+    <rect x="730" y="500" width="68" height="4" rx="2" fill="#2d4a3e"/>
+  </g>
+
+  <!-- ═══ PHONE 2 — RIGHT (health screen) ═══════════════════════ -->
+  <g transform="rotate(8, 988, 304)">
+    <!-- Phone frame -->
+    <rect x="890" y="96" width="196" height="424" rx="28" fill="#111" stroke="#2d4a3e" stroke-width="2" filter="url(#phoneShadow2)"/>
+    <!-- Screen -->
+    <rect x="898" y="108" width="180" height="400" rx="20" fill="url(#screenGrad)"/>
+
+    <!-- Dynamic island -->
+    <rect x="958" y="117" width="44" height="12" rx="6" fill="#0d1a14"/>
+
+    <!-- Status bar -->
+    <text x="908" y="133" font-family="system-ui,sans-serif" font-size="7.5" fill="#6b7280">9:41</text>
+
+    <g clip-path="url(#screen2)">
+      <!-- Header -->
+      <text x="908" y="158" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="white">Health</text>
+      <text x="908" y="173" font-family="system-ui,sans-serif" font-size="8.5" fill="#a5b4fc">Today · May 23</text>
+
+      <!-- Steps card -->
+      <rect x="906" y="180" width="164" height="60" rx="12" fill="#6366f1" fill-opacity="0.12" stroke="#6366f1" stroke-width="1" stroke-opacity="0.3"/>
+      <text x="918" y="200" font-family="system-ui,sans-serif" font-size="8.5" fill="#a5b4fc">👟 Steps</text>
+      <text x="918" y="222" font-family="system-ui,sans-serif" font-size="22" font-weight="900" fill="white">8,240</text>
+      <text x="1054" y="222" font-family="system-ui,sans-serif" font-size="8" fill="#6b7280" text-anchor="end">/ 10,000</text>
+      <rect x="918" y="228" width="140" height="4" rx="2" fill="#1e2e28"/>
+      <rect x="918" y="228" width="115" height="4" rx="2" fill="#6366f1"/>
+
+      <!-- Water card -->
+      <rect x="906" y="250" width="76" height="60" rx="12" fill="#0ea5e9" fill-opacity="0.1" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.3"/>
+      <text x="918" y="270" font-family="system-ui,sans-serif" font-size="8" fill="#7dd3fc">💧 Water</text>
+      <text x="918" y="292" font-family="system-ui,sans-serif" font-size="18" font-weight="900" fill="white">6</text>
+      <text x="918" y="304" font-family="system-ui,sans-serif" font-size="7.5" fill="#6b7280">of 8 glasses</text>
+
+      <!-- Sleep card -->
+      <rect x="992" y="250" width="78" height="60" rx="12" fill="#8b5cf6" fill-opacity="0.1" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.3"/>
+      <text x="1004" y="270" font-family="system-ui,sans-serif" font-size="8" fill="#c4b5fd">😴 Sleep</text>
+      <text x="1004" y="292" font-family="system-ui,sans-serif" font-size="18" font-weight="900" fill="white">7.5</text>
+      <text x="1004" y="304" font-family="system-ui,sans-serif" font-size="7.5" fill="#6b7280">hrs last night</text>
+
+      <!-- Heart rate -->
+      <rect x="906" y="320" width="164" height="50" rx="12" fill="#ef4444" fill-opacity="0.08" stroke="#ef4444" stroke-width="1" stroke-opacity="0.25"/>
+      <text x="918" y="340" font-family="system-ui,sans-serif" font-size="8.5" fill="#fca5a5">❤️ Heart Rate</text>
+      <!-- Mini waveform -->
+      <polyline points="918,358 928,358 934,344 940,368 946,350 952,355 958,355 964,342 970,362 976,352 980,355 988,358 1000,358" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="1064" y="358" font-family="system-ui,sans-serif" font-size="13" font-weight="900" fill="#ef4444" text-anchor="end">72</text>
+      <text x="1064" y="368" font-family="system-ui,sans-serif" font-size="7.5" fill="#6b7280" text-anchor="end">BPM</text>
+
+      <!-- Weekly mood -->
+      <text x="908" y="392" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="white">Weekly Mood</text>
+      <!-- Mood bars -->
+      <rect x="912" y="400" width="16" height="36" rx="4" fill="#10b981" fill-opacity="0.7"/>
+      <rect x="934" y="410" width="16" height="26" rx="4" fill="#10b981" fill-opacity="0.5"/>
+      <rect x="956" y="404" width="16" height="32" rx="4" fill="#10b981" fill-opacity="0.65"/>
+      <rect x="978" y="396" width="16" height="40" rx="4" fill="#10b981"/>
+      <rect x="1000" y="408" width="16" height="28" rx="4" fill="#f59e0b" fill-opacity="0.7"/>
+      <rect x="1022" y="402" width="16" height="34" rx="4" fill="#10b981" fill-opacity="0.8"/>
+      <rect x="1044" y="400" width="16" height="36" rx="4" fill="#10b981" fill-opacity="0.9"/>
+      <text x="912" y="446" font-family="system-ui,sans-serif" font-size="7" fill="#4b5563">M</text>
+      <text x="934" y="446" font-family="system-ui,sans-serif" font-size="7" fill="#4b5563">T</text>
+      <text x="956" y="446" font-family="system-ui,sans-serif" font-size="7" fill="#4b5563">W</text>
+      <text x="978" y="446" font-family="system-ui,sans-serif" font-size="7" fill="#4b5563">T</text>
+      <text x="1000" y="446" font-family="system-ui,sans-serif" font-size="7" fill="#4b5563">F</text>
+      <text x="1022" y="446" font-family="system-ui,sans-serif" font-size="7" fill="#4b5563">S</text>
+      <text x="1044" y="446" font-family="system-ui,sans-serif" font-size="7" fill="#10b981" font-weight="700">S</text>
+
+      <!-- Bottom nav -->
+      <rect x="898" y="462" width="180" height="36" rx="0" fill="#0d1a14"/>
+      <text x="924" y="480" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">🏠</text>
+      <text x="954" y="480" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">🎯</text>
+      <text x="984" y="480" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">📋</text>
+      <text x="1014" y="480" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">❤️</text>
+      <circle cx="1014" cy="465" r="2" fill="#10b981"/>
+      <text x="1044" y="480" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">📊</text>
+    </g>
+
+    <!-- Home indicator -->
+    <rect x="950" y="506" width="52" height="4" rx="2" fill="#2d4a3e"/>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="48" y="598" font-family="system-ui,sans-serif" font-size="11" fill="#3d5a4e">iOS &amp; Android  ·  Local-first &amp; Private  ·  Offline support</text>
+</svg>

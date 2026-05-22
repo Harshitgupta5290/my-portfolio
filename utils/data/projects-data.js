@@ -238,6 +238,19 @@ export const projectsData = [
   },
   {
     id: 16,
+    name: "NovaSaaS",
+    tagline: "Animated Next.js SaaS Template",
+    description:
+      "Production-ready SaaS landing page template with 11 fully built pages, 36 layout combinations via a live StylePanel variant switcher, 6 colour presets, Framer Motion animations throughout, custom magnetic cursor, dark/light mode, zero external images (SVG & CSS only), and full TypeScript.",
+    tools: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "next-themes"],
+    role: "Template Author",
+    category: "Frontend",
+    featured: true,
+    code: null,
+    demo: "https://nova-saas-eight.vercel.app",
+  },
+  {
+    id: 17,
     name: "Portfolio",
     tagline: "This Portfolio — Built From Scratch",
     description:

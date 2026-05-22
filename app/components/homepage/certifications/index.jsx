@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaCloud, FaDatabase, FaCode, FaLink, FaBrain, FaGlobe } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
+import SectionHeading from "../../helper/section-heading";
 
 const issuerWeight = {
   Google:      100,
@@ -171,20 +172,13 @@ function Certifications() {
       <div className="absolute bottom-20 left-[40%] w-48 h-48 bg-cyan-600/8 rounded-full blur-3xl pointer-events-none -z-10" />
 
       {/* ── Section header ──────────────────────────────────────── */}
-      <div className="text-center mt-12 mb-10">
-        <p className="text-[10px] font-black tracking-[0.35em] uppercase text-[#16f2b3] mb-3">
-          {t("certifications.badge")}
-        </p>
-        <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
-          <span className="text-[var(--ink)]">My </span>
-          <span className="bg-gradient-to-r from-violet-400 via-[#16f2b3] to-pink-400 bg-clip-text text-transparent">
-            {t("certifications.label")}
-          </span>
-        </h2>
-        <p className="mt-4 text-sm text-[var(--ink-2)] max-w-md mx-auto leading-relaxed">
-          {t("certifications.subtitle")}
-        </p>
-      </div>
+      <SectionHeading
+        eyebrow={t("certifications.badge")}
+        plain="My"
+        gradient={t("certifications.label")}
+        subtitle={t("certifications.subtitle")}
+        className="mt-12 mb-10"
+      />
 
       {/* ── Stats strip ─────────────────────────────────────────── */}
       <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-10">
