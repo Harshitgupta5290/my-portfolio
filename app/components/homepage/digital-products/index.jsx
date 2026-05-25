@@ -336,7 +336,7 @@ export default function DigitalProducts() {
 
       {/* ── Section header ── */}
       <div className="mb-12 flex items-end justify-between gap-4 border-b border-[var(--line)] pb-4">
-        <SectionHeading eyebrow="What I build &amp; sell" plain="Digital" gradient="Products" />
+        <SectionHeading eyebrow="What I build &amp; sell" plain="Digital" gradient="Products" subtitle="Templates, tools, and starter kits I've packaged from real production work — ready to download and ship." />
         <Link href="https://harshitg5290.gumroad.com" target="_blank" rel="noopener noreferrer"
           className="group hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold border border-[var(--line)] text-[var(--ink-2)] hover:text-[#16f2b3] hover:border-[#16f2b3]/40 transition-all duration-200 flex-shrink-0 mb-1">
           My store

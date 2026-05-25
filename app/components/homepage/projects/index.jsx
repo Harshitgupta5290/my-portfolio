@@ -189,7 +189,7 @@ const Projects = () => {
 
       {/* ── Section header ── */}
       <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl opacity-30 pointer-events-none" />
-      <SectionHeading eyebrow="What I've built" plain="My" gradient={t("projects.label")} />
+      <SectionHeading eyebrow="What I've built" plain="My" gradient={t("projects.label")} subtitle={t("projects.subtitle")} />
 
       <div className="pt-24">
         {/* ── Stats row ── */}

@@ -19,7 +19,7 @@ function Blog() {
         </div>
       </div>
 
-      <SectionHeading eyebrow="Thoughts &amp; writing" plain={t("blogs.latest")} gradient={t("blogs.label")} className="my-5 lg:py-8" />
+      <SectionHeading eyebrow="Thoughts &amp; writing" plain={t("blogs.latest")} gradient={t("blogs.label")} subtitle={t("blogs.subtitle")} className="my-5 lg:py-8" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-8">
         {featuredBlogs.map((blog, i) => (

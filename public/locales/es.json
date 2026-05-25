@@ -12,7 +12,12 @@
   },
   "hero": {
     "available": "Disponible para contratar",
-    "titles": ["Arquitecto Backend", "Desarrollador Full Stack", "Ingeniero de IA", "Ingeniero de Software"],
+    "titles": [
+      "Arquitecto Backend",
+      "Desarrollador Full Stack",
+      "Ingeniero de IA",
+      "Ingeniero de Software"
+    ],
     "contact": "Contáctame",
     "getResume": "Descargar CV",
     "stat1Label": "Años en Producción",
@@ -35,12 +40,14 @@
     "promoted": "↑ Promovido",
     "senior": "Senior",
     "mid": "Nivel Medio",
-    "intern": "Prácticas"
+    "intern": "Prácticas",
+    "subtitle": "Una línea de tiempo de roles, responsabilidades y crecimiento — de practicante a ingeniero senior."
   },
   "skills": {
     "label": "Habilidades",
     "heading": "Habilidades y Tecnologías",
-    "tagline": "Siempre aprendiendo · Siempre entregando"
+    "tagline": "Siempre aprendiendo · Siempre entregando",
+    "subtitle": "El stack completo de herramientas y tecnologías que uso para arquitectar, construir y lanzar sistemas de producción."
   },
   "projects": {
     "label": "Proyectos",
@@ -53,10 +60,12 @@
     "techLabel": "Tecnologías",
     "viewAll": "Ver Todos los Proyectos",
     "ctaExplore": "Explorar el portafolio completo →",
-    "ctaDesc": "Incluyendo motores AI/ML, experiencias 3D, herramientas de desarrollo y contribuciones open-source."
+    "ctaDesc": "Incluyendo motores AI/ML, experiencias 3D, herramientas de desarrollo y contribuciones open-source.",
+    "subtitle": "Proyectos personales, trabajo open-source y desarrollos para clientes en IA, web e infraestructura."
   },
   "education": {
-    "label": "Educación"
+    "label": "Educación",
+    "subtitle": "Títulos formales y fundamentos académicos detrás del oficio de ingeniería."
   },
   "certifications": {
     "label": "Certificaciones",
@@ -70,7 +79,8 @@
     "label": "Blog",
     "readMore": "Leer más",
     "latest": "Últimos",
-    "viewAll": "Ver Todas las Publicaciones"
+    "viewAll": "Ver Todas las Publicaciones",
+    "subtitle": "Análisis técnicos, tutoriales y lecciones aprendidas construyendo sistemas reales."
   },
   "contact": {
     "label": "Contacto",

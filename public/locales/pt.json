@@ -12,7 +12,12 @@
   },
   "hero": {
     "available": "Disponível para contratação",
-    "titles": ["Arquiteto Backend", "Desenvolvedor Full Stack", "Engenheiro de IA", "Engenheiro de Software"],
+    "titles": [
+      "Arquiteto Backend",
+      "Desenvolvedor Full Stack",
+      "Engenheiro de IA",
+      "Engenheiro de Software"
+    ],
     "contact": "Entre em contato",
     "getResume": "Baixar Currículo",
     "stat1Label": "Anos em Produção",
@@ -35,12 +40,14 @@
     "promoted": "↑ Promovido",
     "senior": "Sênior",
     "mid": "Nível Médio",
-    "intern": "Estagiário"
+    "intern": "Estagiário",
+    "subtitle": "Uma linha do tempo de funções, responsabilidades e crescimento — de estagiário a engenheiro sênior."
   },
   "skills": {
     "label": "Habilidades",
     "heading": "Habilidades e Tecnologias",
-    "tagline": "Sempre aprendendo · Sempre entregando"
+    "tagline": "Sempre aprendendo · Sempre entregando",
+    "subtitle": "O stack completo de ferramentas e tecnologias que uso para arquitetar, construir e entregar sistemas de produção."
   },
   "projects": {
     "label": "Projetos",
@@ -53,10 +60,12 @@
     "techLabel": "Tecnologias",
     "viewAll": "Ver Todos os Projetos",
     "ctaExplore": "Explorar o portfólio completo →",
-    "ctaDesc": "Incluindo motores AI/ML, experiências 3D, ferramentas de desenvolvimento e contribuições open-source."
+    "ctaDesc": "Incluindo motores AI/ML, experiências 3D, ferramentas de desenvolvimento e contribuições open-source.",
+    "subtitle": "Projetos paralelos, trabalho open-source e desenvolvimentos para clientes em IA, web e infraestrutura."
   },
   "education": {
-    "label": "Educação"
+    "label": "Educação",
+    "subtitle": "Diplomas formais e bases acadêmicas por trás do ofício de engenharia."
   },
   "certifications": {
     "label": "Certificações",
@@ -70,7 +79,8 @@
     "label": "Blog",
     "readMore": "Ler mais",
     "latest": "Últimos",
-    "viewAll": "Ver Todas as Publicações"
+    "viewAll": "Ver Todas as Publicações",
+    "subtitle": "Mergulhos técnicos, tutoriais e lições aprendidas construindo sistemas reais."
   },
   "contact": {
     "label": "Contato",

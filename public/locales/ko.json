@@ -12,7 +12,12 @@
   },
   "hero": {
     "available": "채용 가능",
-    "titles": ["백엔드 아키텍트", "풀스택 개발자", "AI 엔지니어", "소프트웨어 엔지니어"],
+    "titles": [
+      "백엔드 아키텍트",
+      "풀스택 개발자",
+      "AI 엔지니어",
+      "소프트웨어 엔지니어"
+    ],
     "contact": "연락하기",
     "getResume": "이력서 다운로드",
     "stat1Label": "프로덕션 연수",
@@ -35,12 +40,14 @@
     "promoted": "↑ 승진",
     "senior": "시니어",
     "mid": "중급",
-    "intern": "인턴"
+    "intern": "인턴",
+    "subtitle": "인턴에서 시니어 엔지니어까지 — 역할, 책임, 그리고 성장의 타임라인."
   },
   "skills": {
     "label": "기술",
     "heading": "기술 및 기술 스택",
-    "tagline": "항상 배우며 · 항상 출시"
+    "tagline": "항상 배우며 · 항상 출시",
+    "subtitle": "프로덕션 시스템을 설계, 구축, 배포하는 데 사용하는 모든 도구와 기술 스택."
   },
   "projects": {
     "label": "프로젝트",
@@ -53,10 +60,12 @@
     "techLabel": "기술",
     "viewAll": "모든 프로젝트 보기",
     "ctaExplore": "전체 포트폴리오 탐색 →",
-    "ctaDesc": "AI/ML 엔진, 3D 경험, 개발 도구 및 오픈소스 기여 포함."
+    "ctaDesc": "AI/ML 엔진, 3D 경험, 개발 도구 및 오픈소스 기여 포함.",
+    "subtitle": "AI, 웹, 인프라를 아우르는 사이드 프로젝트, 오픈소스 작업, 클라이언트 개발."
   },
   "education": {
-    "label": "학력"
+    "label": "학력",
+    "subtitle": "엔지니어링 기술 뒤에 있는 공식 학위와 학문적 기초."
   },
   "certifications": {
     "label": "자격증",
@@ -70,7 +79,8 @@
     "label": "블로그",
     "readMore": "더 읽기",
     "latest": "최신",
-    "viewAll": "모든 게시물 보기"
+    "viewAll": "모든 게시물 보기",
+    "subtitle": "실제 시스템 구축에서 얻은 기술적 심층 분석, 튜토리얼, 교훈."
   },
   "contact": {
     "label": "연락처",

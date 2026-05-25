@@ -12,7 +12,12 @@
   },
   "hero": {
     "available": "Available for hire",
-    "titles": ["Backend Architect", "Full Stack Developer", "AI Engineer", "Software Engineer"],
+    "titles": [
+      "Backend Architect",
+      "Full Stack Developer",
+      "AI Engineer",
+      "Software Engineer"
+    ],
     "contact": "Contact me",
     "getResume": "Get Resume",
     "stat1Label": "Years Production",
@@ -35,12 +40,14 @@
     "promoted": "↑ Promoted",
     "senior": "Senior",
     "mid": "Mid-Level",
-    "intern": "Intern"
+    "intern": "Intern",
+    "subtitle": "A timeline of roles, responsibilities, and growth — from intern to senior engineer."
   },
   "skills": {
     "label": "Skills",
     "heading": "Skills & Technologies",
-    "tagline": "Always learning · Always shipping"
+    "tagline": "Always learning · Always shipping",
+    "subtitle": "The full stack of tools and technologies I use to architect, build, and ship production systems."
   },
   "projects": {
     "label": "Projects",
@@ -53,10 +60,12 @@
     "techLabel": "Technologies",
     "viewAll": "View All Projects",
     "ctaExplore": "Explore the full portfolio →",
-    "ctaDesc": "Including AI/ML engines, 3D experiences, dev tools, and open-source contributions."
+    "ctaDesc": "Including AI/ML engines, 3D experiences, dev tools, and open-source contributions.",
+    "subtitle": "Side projects, open-source work, and client builds spanning AI, web, and infrastructure."
   },
   "education": {
-    "label": "Education"
+    "label": "Education",
+    "subtitle": "Formal degrees and academic foundations behind the engineering craft."
   },
   "certifications": {
     "label": "Certifications",
@@ -70,7 +79,8 @@
     "label": "Blogs",
     "readMore": "Read More",
     "latest": "Latest",
-    "viewAll": "View All Posts"
+    "viewAll": "View All Posts",
+    "subtitle": "Technical deep-dives, tutorials, and lessons learned from building real systems."
   },
   "contact": {
     "label": "Contact",

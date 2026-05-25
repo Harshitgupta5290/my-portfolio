@@ -12,7 +12,12 @@
   },
   "hero": {
     "available": "Disponibile per assunzione",
-    "titles": ["Architetto Backend", "Sviluppatore Full Stack", "Ingegnere AI", "Ingegnere Software"],
+    "titles": [
+      "Architetto Backend",
+      "Sviluppatore Full Stack",
+      "Ingegnere AI",
+      "Ingegnere Software"
+    ],
     "contact": "Contattami",
     "getResume": "Scarica CV",
     "stat1Label": "Anni in Produzione",
@@ -35,12 +40,14 @@
     "promoted": "↑ Promosso",
     "senior": "Senior",
     "mid": "Livello Medio",
-    "intern": "Stagista"
+    "intern": "Stagista",
+    "subtitle": "Una cronologia di ruoli, responsabilità e crescita — da stagista a ingegnere senior."
   },
   "skills": {
     "label": "Competenze",
     "heading": "Competenze e Tecnologie",
-    "tagline": "Sempre in apprendimento · Sempre in produzione"
+    "tagline": "Sempre in apprendimento · Sempre in produzione",
+    "subtitle": "Lo stack completo di strumenti e tecnologie che uso per progettare, costruire e distribuire sistemi di produzione."
   },
   "projects": {
     "label": "Progetti",
@@ -53,10 +60,12 @@
     "techLabel": "Tecnologie",
     "viewAll": "Vedi Tutti i Progetti",
     "ctaExplore": "Esplora il portfolio completo →",
-    "ctaDesc": "Inclusi motori AI/ML, esperienze 3D, strumenti di sviluppo e contributi open-source."
+    "ctaDesc": "Inclusi motori AI/ML, esperienze 3D, strumenti di sviluppo e contributi open-source.",
+    "subtitle": "Progetti personali, lavoro open-source e sviluppi per clienti che spaziano tra AI, web e infrastruttura."
   },
   "education": {
-    "label": "Formazione"
+    "label": "Formazione",
+    "subtitle": "Lauree formali e basi accademiche dietro il mestiere dell'ingegneria."
   },
   "certifications": {
     "label": "Certificazioni",
@@ -70,7 +79,8 @@
     "label": "Blog",
     "readMore": "Leggi di più",
     "latest": "Ultimi",
-    "viewAll": "Vedi Tutti i Post"
+    "viewAll": "Vedi Tutti i Post",
+    "subtitle": "Analisi tecniche approfondite, tutorial e lezioni apprese dalla costruzione di sistemi reali."
   },
   "contact": {
     "label": "Contatti",

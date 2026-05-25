@@ -26,7 +26,7 @@ function Education() {
         </div>
       </div>
 
-      <SectionHeading eyebrow="Academic background" plain="My" gradient={t("education.label")} className="my-5 lg:py-8" />
+      <SectionHeading eyebrow="Academic background" plain="My" gradient={t("education.label")} subtitle={t("education.subtitle")} className="my-5 lg:py-8" />
 
       <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">

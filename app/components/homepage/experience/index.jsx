@@ -104,7 +104,7 @@ function Experience() {
       <Image src="/section.svg" alt="" aria-hidden="true" width={1572} height={795} className="absolute top-0 -z-10" />
 
       {/* Section header */}
-      <SectionHeading eyebrow={t("experience.workHistory")} plain="My" gradient={t("experience.label")} className="my-5 lg:py-8" />
+      <SectionHeading eyebrow={t("experience.workHistory")} plain="My" gradient={t("experience.label")} subtitle={t("experience.subtitle")} className="my-5 lg:py-8" />
 
       {/* Timeline */}
       <div className="relative py-8 px-4 sm:px-0">

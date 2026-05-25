@@ -12,7 +12,12 @@
   },
   "hero": {
     "available": "Disponible à l'embauche",
-    "titles": ["Architecte Backend", "Développeur Full Stack", "Ingénieur IA", "Ingénieur Logiciel"],
+    "titles": [
+      "Architecte Backend",
+      "Développeur Full Stack",
+      "Ingénieur IA",
+      "Ingénieur Logiciel"
+    ],
     "contact": "Me contacter",
     "getResume": "Télécharger CV",
     "stat1Label": "Années en Production",
@@ -35,12 +40,14 @@
     "promoted": "↑ Promu",
     "senior": "Senior",
     "mid": "Niveau Intermédiaire",
-    "intern": "Stagiaire"
+    "intern": "Stagiaire",
+    "subtitle": "Une chronologie de rôles, responsabilités et croissance — de stagiaire à ingénieur senior."
   },
   "skills": {
     "label": "Compétences",
     "heading": "Compétences et Technologies",
-    "tagline": "Toujours apprendre · Toujours livrer"
+    "tagline": "Toujours apprendre · Toujours livrer",
+    "subtitle": "L'ensemble des outils et technologies que j'utilise pour architecturer, construire et livrer des systèmes de production."
   },
   "projects": {
     "label": "Projets",
@@ -53,10 +60,12 @@
     "techLabel": "Technologies",
     "viewAll": "Voir Tous les Projets",
     "ctaExplore": "Explorer le portfolio complet →",
-    "ctaDesc": "Y compris les moteurs AI/ML, les expériences 3D, les outils de développement et les contributions open-source."
+    "ctaDesc": "Y compris les moteurs AI/ML, les expériences 3D, les outils de développement et les contributions open-source.",
+    "subtitle": "Projets personnels, travail open-source et réalisations clients couvrant l'IA, le web et l'infrastructure."
   },
   "education": {
-    "label": "Formation"
+    "label": "Formation",
+    "subtitle": "Diplômes formels et fondements académiques derrière le métier d'ingénieur."
   },
   "certifications": {
     "label": "Certifications",
@@ -70,7 +79,8 @@
     "label": "Blog",
     "readMore": "Lire la suite",
     "latest": "Derniers",
-    "viewAll": "Voir Tous les Articles"
+    "viewAll": "Voir Tous les Articles",
+    "subtitle": "Analyses techniques approfondies, tutoriels et leçons tirées de la construction de systèmes réels."
   },
   "contact": {
     "label": "Contact",

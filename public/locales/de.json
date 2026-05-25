@@ -12,7 +12,12 @@
   },
   "hero": {
     "available": "Verfügbar zur Einstellung",
-    "titles": ["Backend-Architekt", "Full-Stack-Entwickler", "KI-Ingenieur", "Software-Ingenieur"],
+    "titles": [
+      "Backend-Architekt",
+      "Full-Stack-Entwickler",
+      "KI-Ingenieur",
+      "Software-Ingenieur"
+    ],
     "contact": "Kontakt aufnehmen",
     "getResume": "Lebenslauf herunterladen",
     "stat1Label": "Jahre Erfahrung",
@@ -35,12 +40,14 @@
     "promoted": "↑ Befördert",
     "senior": "Senior",
     "mid": "Mittelstufe",
-    "intern": "Praktikant"
+    "intern": "Praktikant",
+    "subtitle": "Ein Werdegang von Rollen, Verantwortlichkeiten und Wachstum — vom Praktikanten zum Senior Engineer."
   },
   "skills": {
     "label": "Fähigkeiten",
     "heading": "Fähigkeiten und Technologien",
-    "tagline": "Immer lernend · Immer liefernd"
+    "tagline": "Immer lernend · Immer liefernd",
+    "subtitle": "Der vollständige Stack aus Werkzeugen und Technologien, den ich zur Architektur, Entwicklung und Lieferung von Produktionssystemen nutze."
   },
   "projects": {
     "label": "Projekte",
@@ -53,10 +60,12 @@
     "techLabel": "Technologien",
     "viewAll": "Alle Projekte ansehen",
     "ctaExplore": "Vollständiges Portfolio erkunden →",
-    "ctaDesc": "Einschließlich KI/ML-Engines, 3D-Erlebnisse, Entwicklungstools und Open-Source-Beiträge."
+    "ctaDesc": "Einschließlich KI/ML-Engines, 3D-Erlebnisse, Entwicklungstools und Open-Source-Beiträge.",
+    "subtitle": "Nebenprojekte, Open-Source-Arbeit und Kundenprojekte in den Bereichen KI, Web und Infrastruktur."
   },
   "education": {
-    "label": "Ausbildung"
+    "label": "Ausbildung",
+    "subtitle": "Formale Abschlüsse und akademische Grundlagen hinter dem Ingenieurhandwerk."
   },
   "certifications": {
     "label": "Zertifikate",
@@ -70,7 +79,8 @@
     "label": "Blog",
     "readMore": "Weiterlesen",
     "latest": "Neueste",
-    "viewAll": "Alle Beiträge ansehen"
+    "viewAll": "Alle Beiträge ansehen",
+    "subtitle": "Technische Deep-Dives, Tutorials und Erkenntnisse aus dem Aufbau realer Systeme."
   },
   "contact": {
     "label": "Kontakt",

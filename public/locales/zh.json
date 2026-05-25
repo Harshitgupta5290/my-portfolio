@@ -12,7 +12,12 @@
   },
   "hero": {
     "available": "可接受招聘",
-    "titles": ["后端架构师", "全栈开发者", "AI工程师", "软件工程师"],
+    "titles": [
+      "后端架构师",
+      "全栈开发者",
+      "AI工程师",
+      "软件工程师"
+    ],
     "contact": "联系我",
     "getResume": "下载简历",
     "stat1Label": "生产年数",
@@ -35,12 +40,14 @@
     "promoted": "↑ 晋升",
     "senior": "高级",
     "mid": "中级",
-    "intern": "实习"
+    "intern": "实习",
+    "subtitle": "从实习生到高级工程师——角色、职责与成长的时间轴。"
   },
   "skills": {
     "label": "技能",
     "heading": "技能与技术",
-    "tagline": "持续学习 · 持续交付"
+    "tagline": "持续学习 · 持续交付",
+    "subtitle": "我用于架构、构建和交付生产系统的完整工具和技术栈。"
   },
   "projects": {
     "label": "项目",
@@ -53,10 +60,12 @@
     "techLabel": "技术",
     "viewAll": "查看所有项目",
     "ctaExplore": "探索完整作品集 →",
-    "ctaDesc": "包括AI/ML引擎、3D体验、开发工具和开源贡献。"
+    "ctaDesc": "包括AI/ML引擎、3D体验、开发工具和开源贡献。",
+    "subtitle": "涵盖AI、Web和基础设施的个人项目、开源工作和客户开发。"
   },
   "education": {
-    "label": "教育"
+    "label": "教育",
+    "subtitle": "支撑工程技艺的正式学位与学术基础。"
   },
   "certifications": {
     "label": "证书",
@@ -70,7 +79,8 @@
     "label": "博客",
     "readMore": "阅读更多",
     "latest": "最新",
-    "viewAll": "查看所有文章"
+    "viewAll": "查看所有文章",
+    "subtitle": "从构建真实系统中获得的技术深度分析、教程和经验教训。"
   },
   "contact": {
     "label": "联系",
