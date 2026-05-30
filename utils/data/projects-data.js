@@ -56,16 +56,16 @@ export const projectsData = [
   },
   {
     id: 2,
-    name: "DJoz",
+    name: "MoodBeats",
     tagline: "Emotion-Based Music & Video Recommendation",
     description:
-      "Built an AI-driven multimedia recommendation engine that suggests music and video content based on real-time facial emotion recognition. Developed computer vision pipelines using OpenCV to detect and classify facial emotions from live camera input. Implemented an interactive Flask-based interface with real-time response.",
+      "Built an AI-driven multimedia recommendation engine that suggests music and video content based on real-time facial emotion recognition. Recommends tracks on YouTube and JioSaavn based on detected mood. Developed computer vision pipelines using OpenCV to detect and classify facial emotions from live camera input. Implemented an interactive Flask-based interface with real-time response.",
     tools: ["Python", "OpenCV", "ML", "Flask", "MySQL", "TensorFlow"],
     role: "AI / ML Engineer",
     category: "AI / ML",
     featured: true,
     code: "https://github.com/Harshitgupta5290/emotion-based-music-and-video-recommendation-system",
-    demo: "",
+    demo: "https://djoz-amber.vercel.app/",
   },
   {
     id: 3,

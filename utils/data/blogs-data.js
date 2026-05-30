@@ -1923,9 +1923,9 @@ v2_bp = Blueprint('v2', __name__, url_prefix='/v2')
   {
     id: 3,
     slug: 'real-time-emotion-detection-opencv-djoz',
-    title: 'Real-time Emotion Detection with OpenCV: How DJoz Works',
+    title: 'Real-time Emotion Detection with OpenCV: How MoodBeats Works',
     description:
-      'DJoz is an AI-powered music and video recommendation system that reads your facial emotions in real time. Here is a deep dive into the computer vision pipeline behind it.',
+      'MoodBeats is an AI-powered music and video recommendation system that reads your facial emotions in real time. Here is a deep dive into the computer vision pipeline behind it.',
     published_at: '2025-01-15',
     reading_time_minutes: 7,
     tags: ['OpenCV', 'Machine Learning', 'Computer Vision', 'Python'],
@@ -1933,14 +1933,14 @@ v2_bp = Blueprint('v2', __name__, url_prefix='/v2')
     content: `
       <div class="blog-tldr">
         <strong>TL;DR</strong>
-        <p>DJoz uses a real-time computer vision pipeline to detect your facial emotion via webcam and recommend music accordingly. Stack: OpenCV (Haar Cascade for face detection) → CNN trained on FER-2013 (emotion classification, ~65% accuracy) → MySQL-backed playlist mapping → Flask streaming. This post walks through each layer and what I'd do differently today.</p>
+        <p>MoodBeats uses a real-time computer vision pipeline to detect your facial emotion via webcam and recommend music accordingly. Stack: OpenCV (Haar Cascade for face detection) → CNN trained on FER-2013 (emotion classification, ~65% accuracy) → MySQL-backed playlist mapping → Flask streaming. This post walks through each layer and what I'd do differently today.</p>
       </div>
 
       <h2>The Idea That Started It</h2>
 
       <p>It was late at night during a college hackathon. Someone put on a sad playlist and the room felt heavier. I wondered: what if the music player could sense the mood of the room itself — not from what you clicked, but from what your face was saying?</p>
 
-      <p>That question became DJoz (Dynamic Jukebox). An AI system that reads your face via webcam, classifies your emotional state in real time, and curates a playlist that matches — or intentionally contrasts — your mood. No buttons. No search. Just look at the camera.</p>
+      <p>That question became MoodBeats. An AI system that reads your face via webcam, classifies your emotional state in real time, and curates a playlist that matches — or intentionally contrasts — your mood. No buttons. No search. Just look at the camera.</p>
 
       <p>Here's a complete breakdown of how the computer vision pipeline works under the hood.</p>
 
@@ -2066,9 +2066,9 @@ def video_feed():
 
       <h2>What I'd Do Differently Today</h2>
 
-      <p>Building DJoz taught me more than any textbook. With two more years of experience, here's how I'd redesign it:</p>
+      <p>Building MoodBeats taught me more than any textbook. With two more years of experience, here's how I'd redesign it:</p>
 
-      <p><strong>Replace Haar Cascade with MediaPipe Face Mesh.</strong> It handles non-frontal faces, varying lighting, and partial occlusion — all the conditions where DJoz currently struggles. It also provides 468 facial landmarks for free, enabling much richer feature extraction.</p>
+      <p><strong>Replace Haar Cascade with MediaPipe Face Mesh.</strong> It handles non-frontal faces, varying lighting, and partial occlusion — all the conditions where MoodBeats currently struggles. It also provides 468 facial landmarks for free, enabling much richer feature extraction.</p>
 
       <p><strong>Use transfer learning instead of training from scratch.</strong> Starting from a pretrained ResNet-50 or EfficientNet and fine-tuning on FER-2013 would likely push accuracy from 65% to 75%+ while training significantly faster.</p>
 
@@ -2086,7 +2086,7 @@ def video_feed():
         </ul>
       </div>
 
-      <p>DJoz is open source — check it out on <a href="https://github.com/Harshitgupta5290/emotion-based-music-and-video-recommendation-system" target="_blank" class="text-[#16f2b3] hover:underline">GitHub</a>.</p>
+      <p>MoodBeats is open source — check it out on <a href="https://github.com/Harshitgupta5290/emotion-based-music-and-video-recommendation-system" target="_blank" class="text-[#16f2b3] hover:underline">GitHub</a>.</p>
     `,
   },
   {
