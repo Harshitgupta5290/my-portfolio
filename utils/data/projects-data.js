@@ -78,7 +78,7 @@ export const projectsData = [
     category: "AI / ML",
     featured: true,
     code: "https://github.com/Harshitgupta5290/twitter-sentiment-analysis",
-    demo: "",
+    demo: "https://vibecheck-coral.vercel.app/login",
   },
   {
     id: 4,
