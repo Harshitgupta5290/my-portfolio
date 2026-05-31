@@ -104,7 +104,7 @@ export const projectsData = [
     category: "Full Stack",
     featured: false,
     code: "https://github.com/Harshitgupta5290/_TRAVELIX_",
-    demo: "",
+    demo: "https://travelix-phi.vercel.app/",
   },
   {
     id: 6,
