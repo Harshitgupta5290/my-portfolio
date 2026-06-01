@@ -11,31 +11,36 @@ export const projectCategoryMeta = {
   "Full Stack": {
     hex: "#8b5cf6",
     gradient: "from-violet-500 to-indigo-600",
-    filterActive: "bg-violet-500/10 text-violet-400 border-violet-500/40 shadow-[0_0_16px_-4px_rgba(139,92,246,0.4)]",
+    filterActive:
+      "bg-violet-500/10 text-violet-400 border-violet-500/40 shadow-[0_0_16px_-4px_rgba(139,92,246,0.4)]",
     glow: "rgba(139,92,246,0.15)",
   },
   "AI / ML": {
     hex: "#16f2b3",
     gradient: "from-[#16f2b3] to-cyan-400",
-    filterActive: "bg-[#16f2b3]/10 text-[#16f2b3] border-[#16f2b3]/40 shadow-[0_0_16px_-4px_rgba(22,242,179,0.4)]",
+    filterActive:
+      "bg-[#16f2b3]/10 text-[#16f2b3] border-[#16f2b3]/40 shadow-[0_0_16px_-4px_rgba(22,242,179,0.4)]",
     glow: "rgba(22,242,179,0.15)",
   },
-  "Frontend": {
+  Frontend: {
     hex: "#f472b6",
     gradient: "from-pink-400 to-rose-500",
-    filterActive: "bg-pink-500/10 text-pink-400 border-pink-500/40 shadow-[0_0_16px_-4px_rgba(244,114,182,0.4)]",
+    filterActive:
+      "bg-pink-500/10 text-pink-400 border-pink-500/40 shadow-[0_0_16px_-4px_rgba(244,114,182,0.4)]",
     glow: "rgba(244,114,182,0.15)",
   },
-  "Tools": {
+  Tools: {
     hex: "#f59e0b",
     gradient: "from-amber-400 to-orange-500",
-    filterActive: "bg-amber-500/10 text-amber-400 border-amber-500/40 shadow-[0_0_16px_-4px_rgba(245,158,11,0.4)]",
+    filterActive:
+      "bg-amber-500/10 text-amber-400 border-amber-500/40 shadow-[0_0_16px_-4px_rgba(245,158,11,0.4)]",
     glow: "rgba(245,158,11,0.15)",
   },
-  "Creative": {
+  Creative: {
     hex: "#10b981",
     gradient: "from-emerald-400 to-teal-500",
-    filterActive: "bg-emerald-500/10 text-emerald-400 border-emerald-500/40 shadow-[0_0_16px_-4px_rgba(16,185,129,0.4)]",
+    filterActive:
+      "bg-emerald-500/10 text-emerald-400 border-emerald-500/40 shadow-[0_0_16px_-4px_rgba(16,185,129,0.4)]",
     glow: "rgba(16,185,129,0.15)",
   },
 };
@@ -160,11 +165,19 @@ export const projectsData = [
   // },
   {
     id: 10,
-    name: "Lumina",
-    tagline: "Real-Time WebGL Particle Engine with AI Hand Tracking",
+    name: "LUMINA",
+    tagline: "WebGL Particle Engine with JARVIS AI & Real-Time Hand Tracking",
     description:
-      "A browser-native 3D particle visualization engine running 15,000 bloom-lit particles at 60fps. Features a custom GLSL ShaderMaterial with per-particle glow, UnrealBloom post-processing for neon-light aesthetics, and GPU-accelerated cursor physics (repulsion/attraction computed entirely in the vertex shader). Integrates Google MediaPipe for real-time AI hand tracking — open your palm to expand the particle cloud, close your fist to contract it, pinch to cycle colors. Nine mathematical shape templates (Heart, DNA Helix, Saturn Ring, Spiral Galaxy, and more) with scatter-reform morph transitions. Zero install — one HTML file, all CDN.",
-    tools: ["Three.js", "WebGL", "GLSL", "MediaPipe", "JavaScript"],
+      "A browser-native WebGL particle engine running 15,000 bloom-lit particles at 60fps with a full JARVIS AI mode. Built with a custom GLSL ShaderMaterial for per-particle glow, UnrealBloom post-processing for neon-light aesthetics, and GPU-accelerated cursor physics computed entirely in the vertex shader. Integrates Google MediaPipe for real-time AI hand tracking — open palm expands the cloud, closed fist contracts it, pinch cycles colors. Features a JARVIS voice assistant mode powered by Gemini AI and Web Speech API: speak any question to get an AI answer spoken aloud, with particles spelling out key words in real-time. Also includes an AI shape generator — describe any 3D form in plain English and Gemini writes the Three.js math on the fly, morphing 15,000 particles into the described shape. Nine built-in mathematical templates (Heart, DNA Helix, Saturn Ring, Spiral Galaxy, Vortex, and more) with scatter-reform morph transitions. Zero install — two HTML files, all CDN.",
+    tools: [
+      "Three.js",
+      "WebGL",
+      "GLSL",
+      "MediaPipe",
+      "Gemini AI",
+      "Web Speech API",
+      "JavaScript",
+    ],
     role: "AI Engineer",
     category: "AI / ML",
     featured: true,
@@ -242,7 +255,13 @@ export const projectsData = [
     tagline: "Animated Next.js SaaS Template",
     description:
       "Production-ready SaaS landing page template with 11 fully built pages, 36 layout combinations via a live StylePanel variant switcher, 6 colour presets, Framer Motion animations throughout, custom magnetic cursor, dark/light mode, zero external images (SVG & CSS only), and full TypeScript.",
-    tools: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "next-themes"],
+    tools: [
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "next-themes",
+    ],
     role: "Template Author",
     category: "Frontend",
     featured: true,
