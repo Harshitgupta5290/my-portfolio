@@ -169,15 +169,7 @@ export const projectsData = [
     tagline: "WebGL Particle Engine with JARVIS AI & Real-Time Hand Tracking",
     description:
       "A browser-native WebGL particle engine running 15,000 bloom-lit particles at 60fps with a full JARVIS AI mode. Built with a custom GLSL ShaderMaterial for per-particle glow, UnrealBloom post-processing for neon-light aesthetics, and GPU-accelerated cursor physics computed entirely in the vertex shader. Integrates Google MediaPipe for real-time AI hand tracking — open palm expands the cloud, closed fist contracts it, pinch cycles colors. Features a JARVIS voice assistant mode powered by Gemini AI and Web Speech API: speak any question to get an AI answer spoken aloud, with particles spelling out key words in real-time. Also includes an AI shape generator — describe any 3D form in plain English and Gemini writes the Three.js math on the fly, morphing 15,000 particles into the described shape. Nine built-in mathematical templates (Heart, DNA Helix, Saturn Ring, Spiral Galaxy, Vortex, and more) with scatter-reform morph transitions. Zero install — two HTML files, all CDN.",
-    tools: [
-      "Three.js",
-      "WebGL",
-      "GLSL",
-      "MediaPipe",
-      "Gemini AI",
-      "Web Speech API",
-      "JavaScript",
-    ],
+    tools: ["Three.js", "WebGL", "GLSL", "MediaPipe", "Gemini AI", "Web Speech API", "JavaScript"],
     role: "AI Engineer",
     category: "AI / ML",
     featured: true,
