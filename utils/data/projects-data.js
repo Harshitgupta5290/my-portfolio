@@ -169,7 +169,7 @@ export const projectsData = [
     category: "Creative",
     featured: true,
     code: "https://github.com/Harshitgupta5290/3d-showroom",
-    demo: "",
+    demo: "https://3d-showroom-lovat.vercel.app/",
   },
   {
     id: 11,
